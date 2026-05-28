@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+
+/* container do carrossel */
+.carossel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+    align-items: stretch;
+}
+
+/* cada card */
+.card-receita {
+    min-width: 200px;
+    max-width: 200px;
+    background-color: #DDD0B3; /* cor de superfície da sua paleta */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s; /* animação suave ao passar o mouse */
+    display: flex; /* adicionado */
+    flex-direction: column; /* adicionado — empilha imagem e texto */
+}
+
+/* efeito ao passar o mouse */
+.card-receita:hover {
+    transform: translateY(-2px);
+}
+
+/* imagem do card */
+.card-receita img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* título da receita */
+.card-receita h3 {
+    padding-top: 10px !important;
+    padding-left: 10px !important;
+    font-size: 0.9rem !important;
+    color: #3B2A1A; /* cor de texto da sua paleta */
+    text-align: left;
+    margin-bottom: 10px !important;
+}
+
+.CafeManha h3 {
+    color: #3B2A1A;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+.AlmoçoJanta h3 {
+    color: #3B2A1A;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+.CafeTarde h3 {
+    color: #3B2A1A;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+.horario {
+    text-align: center;
+    background-color: #94663b;
+    box-shadow: 2px 2px 2px 0px rgba(110, 72, 37, 0.451);
+    display: inline-block;
+    margin: auto;
+
+    display: block;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.horario h3 {
+    color: #DDD0B3;
+    
+}
+
+
+.card-receita .tempo {
+    padding-left: 5px;
+    height: auto;
+    width: 20px;
+    opacity: 40%;
+    justify-content: left;
+}
+
+.card-receita h4 {
+    padding-left: 3px;
+    margin-top: auto;
+    color: #3B2A1A;
+    font-family: "Cause", cursive;
+    font-weight: 500;
+    font-size: 1em;
+}

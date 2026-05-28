@@ -1,0 +1,70 @@
+h1, h5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+h1 {
+    background-color: #ddd0b3;
+}
+
+h5 {
+    background-color: #ddd0b3;
+    margin: -23px 590px 0 590px;
+    border-radius: 5px;
+}
+
+.elementos {
+    background-color: #ddd0b3;
+    margin: 0px 650px 0px 650px;
+    padding: px 0px px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* ingredientes */
+.ingredientes {
+    justify-content: left;
+    background-color: #edd9af;
+    margin: 0px 500px 0px 100px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* Congifuração dos passos */
+.preparo {
+    list-style: none;
+    padding: 0;
+}
+
+.preparo li {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 20px 0;
+    margin-left: 200px;
+}
+
+.ReceitasPasso {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Posicao {
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #edd9af;
+    color: #000000;
+    font-weight: bold;
+    font-size: small;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
+}
+
+.ReceitasPasso p {
+    margin: 0;
+    font-size: medium;
+    color: #463520;
+}

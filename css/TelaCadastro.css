@@ -1,0 +1,85 @@
+body{
+    background-color: #efe2c7;
+}
+
+.tela-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.cadastro-card{
+    background-color: #e2d4b6;
+    width: 700px;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.titulo{
+    text-align: center;
+    color: #5f3f28;
+    margin-bottom: 50px;
+    background-color: #d1c19f;
+    border-radius: 10px;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -40px;
+    padding-bottom: 3px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+
+.form-label{
+    color: #4b311f;
+    font-weight: bold;
+}
+
+.form-control,
+.form-select{
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d8c8a8;
+}
+
+.btn-cadastrar{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #c96a2b;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-cadastrar:hover{
+    background-color: #c16226;
+}
+
+.erro{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.imagem {
+    width: 350px;
+    margin-top: 150px;
+}
