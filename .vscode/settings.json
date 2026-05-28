@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "git.decorations.enabled": false,
+    "git.blame.editorDecoration.disableHover": false,
+    "git.blame.editorDecoration.enabled": false
 }
