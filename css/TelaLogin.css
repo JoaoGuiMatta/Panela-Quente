@@ -1,5 +1,5 @@
 body{
-    background-color: #efe2c7;
+    background-color: var(--FundoAlt);
 }
 
 .tela-login{
@@ -10,19 +10,19 @@ body{
 }
 
 .login-card{
-    background-color: #e2d4b6;
+    background-color: var(--SurfaceCard);
     width: 450px;
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 1px 2px 15px 1px #a79c8692;
+    box-shadow: 1px 2px 15px 1px var(--SombraLogin);
 }
 
 .titulo-login{
     text-align: center;
-    color: #5f3f28;
+    color: var(--TextoSuave);
     margin-bottom: 50px;
     font-size: 1.8em;
-    background-color: #d1c19f;
+    background-color: var(--SurfaceSuave);
     border-radius: 10px;
     margin-left: -40px;
     margin-right: -40px;
@@ -36,14 +36,14 @@ body{
 }
 
 .input-group-text{
-    background-color: #d8c8a8;
-    border: 1px solid #d8c8a8;
-    color: #4b311f;
+    background-color: var(--SurfaceInput);
+    border: 1px solid var(--SurfaceInput);
+    color: var(--MarromEscuro);
 }
 
 .form-control{
     padding: 15px;
-    border: 1px solid #d8c8a8;
+    border: 1px solid var(--SurfaceInput);
 }
 
 .btn-login{
@@ -52,7 +52,7 @@ body{
     border: none;
     border-radius: 10px;
     background-color: #c96a2b;
-    color: #e2d4b6;
+    color: var(--SurfaceCard);
     font-size: 18px;
     margin-top: 10px;
 }
@@ -60,7 +60,7 @@ body{
 .ou{
     text-align: center;
     margin: 25px 0;
-    color: #4b311f;
+    color: var(--MarromEscuro);
 }
 
 .criar-conta{
@@ -76,7 +76,7 @@ body{
 
 .criar-conta:hover{
     background-color: #c96a2b;
-    color: #e2d4b6;
+    color: var(--SurfaceCard);
 }
 
 header {

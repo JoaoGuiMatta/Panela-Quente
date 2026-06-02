@@ -5,32 +5,42 @@ h1, h5 {
 }
 
 h1 {
-    background-color: #ddd0b3;
+    background-color: var(--Surface);
 }
 
 h5 {
-    background-color: #ddd0b3;
-    margin: -23px 590px 0 590px;
-    border-radius: 5px;
+    background-color: var(--Surface);
+    margin: -8px 510px 0 ;
+    border-radius: 0px 0px 7px 7px;
+    font-size: 1rem;
 }
 
 .elementos {
-    background-color: #ddd0b3;
-    margin: 0px 650px 0px 650px;
+    background-color: var(--Surface);
+    margin: 20px 590px ;
     padding: px 0px px 0px;
     border-radius: 20px;
     text-align: center;
 }
 
+
+
 /* ingredientes */
 .ingredientes {
-    justify-content: left;
-    background-color: #edd9af;
-    margin: 0px 500px 0px 100px;
+    background-color: var(--SurfaceIngredientes);
+    margin-right: 1000px;
+    margin-left: 50px;
     border-radius: 30px;
     text-align: center;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
 }
 
+.ingredientes li {
+    border-bottom: 1.5px solid var(--SurfaceMuted);
+    padding: 5px 0;
+}
 /* Congifuração dos passos */
 .preparo {
     list-style: none;
@@ -38,7 +48,7 @@ h5 {
 }
 
 .preparo li {
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid var(--BordaInput);
     padding: 20px 0;
     margin-left: 200px;
 }
@@ -56,8 +66,8 @@ h5 {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    background-color: #edd9af;
-    color: #000000;
+    background-color: var(--SurfaceIngredientes);
+    color:var(--Preto);
     font-weight: bold;
     font-size: small;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
@@ -66,5 +76,6 @@ h5 {
 .ReceitasPasso p {
     margin: 0;
     font-size: medium;
-    color: #463520;
+    color:var(--TextoSecundario) ;
 }
+

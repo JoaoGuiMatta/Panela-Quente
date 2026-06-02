@@ -1,0 +1,32 @@
+Ds do projeto
+==--==--==--==--==--==--==TELA DE CADASTRO==--==--==--==--==--==--==
+NomeUsuario = Nome do usuário
+NomeMae = Nome materno
+Nasc = Data de nascimento
+Sexo = Sexo do usuario
+Cpf = Cpf do usuario
+Cep = Cep do usuario
+Logradouro = logradouro do usuario
+Numero = Numero da casa do usuario
+Bairro = bairro do usuario
+Cidade = cidade do usuario
+Estado = Estado do usuario
+Cel = celular do usuario
+Tel = Telefone fixo do usuario
+LoginCad = login da tela de cadastro
+SenhaCad = senha da tela de cadastro
+ConfirmarSenha = confirmar a senha
+
+==--==--==--==--==--==--==CRIAÇÃO DE RECEITA==--==--==--==--==--==--==
+
+NomeReceita = Nome da receita
+Descricao = Descrição da receita
+TempoReceita = Tempo estimado da receita
+Passo = Passos da receita
+Categoria = Categoria da receita
+Foto - Foto do prato
+
+==--==--==--==--==--==--==Login==--==--==--==--==--==--==
+
+LoginAcesso = login
+SenhaAcesso = senha do login

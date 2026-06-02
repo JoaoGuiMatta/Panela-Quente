@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/TelaCadastro.css">
     <link rel="shortcut icon" href="../PanelaQuenteFavicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/darkmode.css">
 </head>
 
 <body>
@@ -49,26 +50,19 @@
                 <form>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Nome da receita
-                        </label>
-
+                        <label class="form-label">Nome da receita</label>
                         <input type="text" class="form-control" placeholder="Nome do prato" id="NomeReceita">
                     </div>
 
                     
                     <div class="mb-3">
-                        <label class="form-label">
-                            Descrição do prato
-                        </label>
-                        <input type="text" class="form-control" placeholder="Digite a descrição" id="DescicaoReceita">
+                        <label class="form-label">Descrição do prato</label>
+                        <input type="text" class="form-control" placeholder="Digite a descrição" id="Descricao">
                     </div>
                     
                                         
                     <div class="mb-3">
-                        <label class="form-label">
-                            Estimativa de tempo de preparo
-                        </label>
+                        <label class="form-label">Estimativa de tempo de preparo</label>
                         <input type="number" class="form-control" placeholder="Ex: 30min" min="1" id="TempoReceita">
                         <small class="form-text text-muted">
                         Digite em minutos. Ex: 1h = 60min, 1h30 = 90min
@@ -77,9 +71,7 @@
                     
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Modo de preparo
-                        </label>
+                        <label class="form-label">Modo de preparo</label>
                         <div class="d-flex gap-2">
                             <input type="text" class="form-control" id="Passo" placeholder="Digite um passo">
 
@@ -91,9 +83,7 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label">
-                            Categoria
-                        </label>
+                        <label class="form-label">Categoria</label>
                         <select class="form-select" id="Categoria">
                             <option selected disabled hidden>Escolha uma Categoria</option>
                             <option>Café da Manhã</option>
@@ -103,22 +93,18 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                        Foto do prato
-                        </label>
-                        <input type="file" accept="image/*">
+                        <label class="form-label">Foto do prato</label>
+                        <input type="file" accept="image/*" id="Foto">
                     </div>
 
                         
-                <button type="submit" class="btn-cadastrar">
-                        Enviar deliciosa receita
-                </button>
+                <button type="submit" class="btn-cadastrar">Enviar receita</button>
             </form>
         </div>
     </div>
 
-    <footer class="d-flex justify-content-between align-items-center py-3 px-4 border-top">
-        <span>© 2025 Panela Quente</span>
+    <footer class="d-flex justify-content-between align-items-center py-3 px-4">
+        <span>© 2026 Panela Quente</span>
         <div class="d-flex gap-3">
             <a href="https://github.com/JoaoGuiMatta"><i class="bi bi-github"></i></a>
             <a href="#"><i class="bi bi-facebook"></i></a>

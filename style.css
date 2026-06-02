@@ -1,8 +1,6 @@
-
-
 /* Configuração do body e fconfigurações básicas */
 body {
-    background-color: #f5ecd7;
+    background-color: var(--Fundo);
     margin: 0;
     min-height: 100vh; /* body ocupa a tela toda */
     display: flex;
@@ -19,7 +17,7 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-body, p, input, button .entrar{
+body, p, input, button, .entrar{
     font-family: 'Nunito', sans-serif;
     font-weight: 600
 }
@@ -32,7 +30,7 @@ a {
 
 /* Header*/
 header {
-    background-color: #6b4226;
+    background-color: var(--HeaderBg);
     height: 100px;
     display: flex;
     align-items: center;
@@ -47,7 +45,7 @@ header #Logo {
 
 header a {
     text-decoration: none;
-    color: #f5ecd7;
+    color: var(--Fundo);
 }
 /* fim header*/
 
@@ -59,7 +57,7 @@ nav a{
 
 nav a:hover {
     border-radius: 10px;
-    color: #fff6e2;
+    color: var(--FundoLogin);
 }
 
 nav {
@@ -73,8 +71,8 @@ nav {
 
 /* class */
 .entrar {
-    color: rgb(224, 224, 224);
-    background-color: #3b2110;
+    color: var(--TextoBranco);
+    background-color: var(--HeaderBgEscuro);
     padding: 10px;
     border-radius: 10px;
 }
@@ -89,7 +87,7 @@ nav {
     rotate: 30deg;
     position: relative;
     top: -20px;
-    color: #000;
+    color: var(--Preto);
 }
 /* fim class */
 
@@ -100,7 +98,7 @@ nav {
 
 .BoasVindas {
     text-align: center;
-    color: #3B2A1A;
+    color: var(--TextoPrincipal);
     margin-top: 20px;
     margin-bottom: 50px;
 }
@@ -117,7 +115,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #6B4226;
+    background: var(--HeaderBg);
     border-radius: 10px;
     padding: 0.5rem;
     z-index: 99;
@@ -131,22 +129,22 @@ nav {
 .submenu a {
     display: block;
     padding: 0.4rem 0.8rem;
-    color: #F5ECD7;
+    color: var(--Fundo);
     text-decoration: none;
     font-size: 0.85rem;
 }
 
 .submenu a:hover {
-    color: #fff6e2;
+    color: var(--FundoLogin);
     border-radius: 10px;
 }
 /* fim do submenu */
 
-.dark {
+.ButtonDark {
     margin-left: auto;
     margin-right: 50px;
     font-size: 1.5em;
-    color: #cf843f;
+    color: var(--AcentoClaro);
 }
 
 .panela {
@@ -157,51 +155,24 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #6B4226; /* cor de fundo do footer */
-    color: #F5ECD7; /* cor do texto */
+    background-color: var(--HeaderBg); /* cor de fundo do footer */
+    color: var(--TextoGeral); /* cor do texto */
     margin-top: auto; /* empurra o footer pra baixo */
-    border-color: #C47C3A !important; /* cor da linha border-top */
     font-size: 1rem; /* deixa os ícones maiores */
 }
 
 footer a {
-    color: #C47C3A; /* cor dos ícones */
+    color: var(--Acento); /* cor dos ícones */
     font-size: 1.2rem; /* tamanho dos ícones */
     text-decoration: none; /* tira a decoração do texto */
 }
 
-footer a:hover {
-    color: #cf843f; /* cor ao passar o mouse */
+footer span {
+    font-size: smaller;
+    color: var(--Acento);
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-
-    /* header */
-    header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px;
-        justify-content: space-between;
-    }
-
-    header #Logo {
-        height: 70px;
-    }
-
-    nav {
-        display: none; /* esconde no mobile */
-    }
-
-    .dark, .entrar {
-        margin: 0;
-    }
-
-    /* cards */
-    .card-receita {
-        min-width: 150px;
-        max-width: 150px;
-    }
+footer a:hover {
+    color: var(--AcentoClaro); /* cor ao passar o mouse */
 }
 
 .cont {
@@ -211,8 +182,8 @@ footer a:hover {
     width: 250px;
     height: 500px;
     text-align: center;
-    background-color: #f5ecd7;
-    box-shadow: 0px 0px 10px 5px #d5cdb9cd; 
+    background-color: var(--Fundo);
+    box-shadow: 0px 0px 10px 5px var(--Borda); 
     border-radius: 15px;
     font-family: 'Playfair Display', serif;;
 }
@@ -229,5 +200,5 @@ footer a:hover {
 
 .icone-chef {
     width: 80px;
-    fill: #8B5E3C;
+    fill: var(--MarromMedio);
 }

@@ -1,5 +1,5 @@
 body{
-    background-color: #efe2c7;
+    background-color: var(--FundoAlt);
 }
 
 .tela-cadastro{
@@ -11,7 +11,7 @@ body{
 }
 
 .cadastro-card{
-    background-color: #e2d4b6;
+    background-color: var(--SurfaceCard);
     width: 700px;
     padding: 40px;
     border-radius: 30px;
@@ -27,9 +27,9 @@ h4 {
 
 .titulo{
     text-align: center;
-    color: #5f3f28;
+    color: var(--TextoSuave);
     margin-bottom: 50px;
-    background-color: #d1c19f;
+    background-color: var(--SurfaceSuave);
     border-radius: 10px;
     margin-left: -40px;
     margin-right: -40px;
@@ -40,15 +40,14 @@ h4 {
 
 
 .form-label{
-    color: #4b311f;
+    color: var(--TextoSecundario);
     font-weight: bold;
 }
 
-.form-control,
-.form-select{
+.form-control, .form-select{
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #d8c8a8;
+    border: 1px solid var(--SurfaceInput);
 }
 
 .btn-cadastrar{
@@ -63,7 +62,7 @@ h4 {
 }
 
 .btn-cadastrar:hover{
-    background-color: #c16226;
+    background-color: var(--AcentoHoover);
 }
 
 .erro{
@@ -82,4 +81,11 @@ h4 {
 .imagem {
     width: 350px;
     margin-top: 150px;
+}
+
+.endereço {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 3px solid var(--SurfaceMedio);
+    border-bottom: 3px solid  var(--SurfaceMedio);
 }

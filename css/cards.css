@@ -15,10 +15,10 @@
 .card-receita {
     min-width: 200px;
     max-width: 200px;
-    background-color: #DDD0B3; /* cor de superfície da sua paleta */
+    background-color: var(--Surface); /* cor de superfície da sua paleta */
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px var(--SombraCard);
     transition: transform 0.2s; /* animação suave ao passar o mouse */
     display: flex; /* adicionado */
     flex-direction: column; /* adicionado — empilha imagem e texto */
@@ -41,27 +41,27 @@
     padding-top: 10px !important;
     padding-left: 10px !important;
     font-size: 0.9rem !important;
-    color: #3B2A1A; /* cor de texto da sua paleta */
+    color: var(--TextoPrincipal); /* cor de texto da sua paleta */
     text-align: left;
     margin-bottom: 10px !important;
 }
 
 .CafeManha h3 {
-    color: #3B2A1A;
+    color: var(--TextoPrincipal);
     font-size: 1.2rem;
     padding: 0 20px;
     margin-bottom: 0px;
 }
 
 .AlmoçoJanta h3 {
-    color: #3B2A1A;
+    color: var(--TextoPrincipal);
     font-size: 1.2rem;
     padding: 0 20px;
     margin-bottom: 0px;
 }
 
 .CafeTarde h3 {
-    color: #3B2A1A;
+    color: var(--TextoPrincipal);
     font-size: 1.2rem;
     padding: 0 20px;
     margin-bottom: 0px;
@@ -69,8 +69,8 @@
 
 .horario {
     text-align: center;
-    background-color: #94663b;
-    box-shadow: 2px 2px 2px 0px rgba(110, 72, 37, 0.451);
+    background-color: var(--AcentoMedio);
+    box-shadow: 2px 2px 2px 0px var(--SombraHorario);
     display: inline-block;
     margin: auto;
 
@@ -80,7 +80,7 @@
 }
 
 .horario h3 {
-    color: #DDD0B3;
+    color: var(--Surface);
     
 }
 
@@ -96,7 +96,7 @@
 .card-receita h4 {
     padding-left: 3px;
     margin-top: auto;
-    color: #3B2A1A;
+    color: var(--TextoPrincipal);
     font-family: "Cause", cursive;
     font-weight: 500;
     font-size: 1em;
