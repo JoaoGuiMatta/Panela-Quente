@@ -2,6 +2,7 @@ h1, h5 {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: var(--TextoSecundario);
 }
 
 h1 {
@@ -21,6 +22,7 @@ h5 {
     padding: px 0px px 0px;
     border-radius: 20px;
     text-align: center;
+    color: var(--TextoSecundario);
 }
 
 
@@ -35,6 +37,7 @@ h5 {
     list-style: none;
     padding: 0;
     overflow: hidden;
+    color: var(--TextoSecundario);
 }
 
 .ingredientes li {
@@ -77,5 +80,9 @@ h5 {
     margin: 0;
     font-size: medium;
     color:var(--TextoSecundario) ;
+}
+
+.Cronometro {
+    filter: var(--FiltroTempo);
 }
 

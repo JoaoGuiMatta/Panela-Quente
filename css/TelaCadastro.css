@@ -62,7 +62,7 @@ h4 {
 }
 
 .btn-cadastrar:hover{
-    background-color: var(--AcentoHoover);
+    background-color: var(--AcentoHover);
 }
 
 .erro{
@@ -83,7 +83,7 @@ h4 {
     margin-top: 150px;
 }
 
-.endereço {
+.endereco {
     padding-left: 10px;
     padding-right: 10px;
     border-top: 3px solid var(--SurfaceMedio);

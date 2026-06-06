@@ -1,0 +1,49 @@
+==--==--==--==HEADER/NAV==--==--==--==
+.menus — container do item "Receitas" com submenu
+.submenu — dropdown das categorias
+.entrar — botão de login
+.dark — ícone da lua do dark mode
+.DarkButton —  botão alternativo do dark mode
+
+==--==--==--==INDEX==--==--==--==
+
+.BoasVindas — título e subtítulo de boas vindas
+.cont — card lateral "Dica do chef"
+.chefe — container interno do chef
+.icone-chef — ícone SVG do chapéu
+.Dica — texto da dica
+.mensagem — frase inspiracional
+.TitulosCards — titulos dos cards das receitas (almoço, café da manhã e café da tarde)
+.horario — badge com nome da categoria
+.carossel — container dos cards
+.card-receita — cada card de receita
+.tempo — ícone de relógio nos cards
+
+==--==--==--==PÁGINAS DE RECEITA==--==--==--==
+
+.PagTitulo — título da página
+.ingredientes — lista de ingredientes
+.preparo — lista de passos
+.ReceitasPasso — container de cada passo
+.Posicao — badge com número do passo
+.elementos — container geral
+.Cronometro — ícone de relógio nas paginas de receita
+
+==--==--==--==LOGIN==--==--==--==
+
+.tela-login — centraliza o card
+.login-card — card do login
+.titulo-login — título de boas vindas
+.btn-login — botão enviar
+.criar-conta — botão criar conta
+.ou — texto "OU"
+.imagem — logo no topo
+
+==--==--==--==CADASTRO==--==--==--==
+
+.tela-cadastro — centraliza o card
+.cadastro-card — card do formulário
+.titulo — título do cadastro
+.btn-cadastrar — botão cadastrar
+.erro — ⚠️ declarado mas ainda não aplicado no HTML
+.endereco —  container dos campos de endereço

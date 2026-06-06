@@ -45,7 +45,7 @@ header #Logo {
 
 header a {
     text-decoration: none;
-    color: var(--Fundo);
+    color: var(--TextoGeral);
 }
 /* fim header*/
 
@@ -57,7 +57,7 @@ nav a{
 
 nav a:hover {
     border-radius: 10px;
-    color: var(--FundoLogin);
+    color: var(--TextoGeralHover);
 }
 
 nav {
@@ -79,15 +79,6 @@ nav {
 
 .entrar:hover{
     text-decoration: none;
-}
-
-.linha {
-    height: 90px;
-    width: auto;
-    rotate: 30deg;
-    position: relative;
-    top: -20px;
-    color: var(--Preto);
 }
 /* fim class */
 
@@ -129,28 +120,22 @@ nav {
 .submenu a {
     display: block;
     padding: 0.4rem 0.8rem;
-    color: var(--Fundo);
+    color: var(--TextoGeral);
     text-decoration: none;
     font-size: 0.85rem;
 }
 
 .submenu a:hover {
-    color: var(--FundoLogin);
+    color: var(--TextoGeralHover);
     border-radius: 10px;
 }
 /* fim do submenu */
 
-.ButtonDark {
+.DarkButton {
     margin-left: auto;
     margin-right: 50px;
     font-size: 1.5em;
     color: var(--AcentoClaro);
-}
-
-.panela {
-    margin-top: -1500px;
-    justify-content: left;
-    height: 950px;
 }
 
 /* Footer */

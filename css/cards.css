@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
 
 /* container do carrossel */
 .carossel {
@@ -46,21 +46,7 @@
     margin-bottom: 10px !important;
 }
 
-.CafeManha h3 {
-    color: var(--TextoPrincipal);
-    font-size: 1.2rem;
-    padding: 0 20px;
-    margin-bottom: 0px;
-}
-
-.AlmoçoJanta h3 {
-    color: var(--TextoPrincipal);
-    font-size: 1.2rem;
-    padding: 0 20px;
-    margin-bottom: 0px;
-}
-
-.CafeTarde h3 {
+.TitulosCards h3 {
     color: var(--TextoPrincipal);
     font-size: 1.2rem;
     padding: 0 20px;
@@ -84,12 +70,11 @@
     
 }
 
-
 .card-receita .tempo {
     padding-left: 5px;
     height: auto;
     width: 20px;
-    opacity: 40%;
+    filter: var(--FiltroTempo);
     justify-content: left;
 }
 

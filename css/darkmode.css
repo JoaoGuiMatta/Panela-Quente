@@ -10,6 +10,7 @@
   --HeaderBg:           #6B4226;   /* marrom header principal */
   --HeaderBgEscuro:    #3b2110;   /* marrom mais escuro — hover/footer */
   --TextoGeral:       #F5E6D7;
+  --TextoGeralHover:       #e2d5c8;
  
   /* ACENTOS / BOTÕES */
   --Acento:              #C47C3A;   /* terracota — botões e destaques */
@@ -54,6 +55,7 @@
   --PretoCurto:         #000;              /* preto abreviado — alias do anterior */
   --SombraLoginAlt:     #a79c8692;        /* sombra translúcida login card */
   --SombraCardAlt:      rgba(0,0,0,0.15); /* sombra card formato compacto */
+  --FiltroTempo: invert(53%) sepia(3%) saturate(1976%) hue-rotate(4deg) brightness(91%) contrast(84%);
 }
  
 /* ────────────────────────────────────────
@@ -67,6 +69,8 @@ body.dark {
   --TextoSecundario:    #C4A882;   /* bege médio — subtítulos */
   --TextoSuave:         #9e8060;   /* bege acinzentado — textos de apoio */
   --TextoGeral:       #F5E6D7;
+  --TextoGeralHover:       #e2d5c8;
+
  
   /* HEADER / NAV */
   --HeaderBg:           #3D2510;   /* marrom escuro header */
@@ -86,7 +90,7 @@ body.dark {
  
   /* SUPERFÍCIES / CARDS */
   --Surface:             #2E1E0F;   /* marrom escuro — cards */
-  --SurfaceAlt:         #2E1E0F;
+  --SurfaceAlt:         #4b3119;
   --SurfaceCard:        #38230f;   /* card login dark */
   --SurfaceIngredientes:#3a2510;   /* ingredientes dark */
   --SurfaceInput:       #2a1a0a;   /* inputs dark */
@@ -115,5 +119,6 @@ body.dark {
   --PretoCurto:         #000;              /* preto abreviado */
   --SombraLoginAlt:     rgba(0, 0, 0, 0.5); /* sombra login card no dark */
   --SombraCardAlt:      rgba(0,0,0,0.4);   /* sombra card formato compacto no dark */
+  --FiltroTempo:  invert(73%) sepia(5%) saturate(1291%) hue-rotate(340deg) brightness(91%) contrast(85%);
 }
  

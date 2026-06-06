@@ -9,7 +9,8 @@
 .PagTitulo {
    text-align: center;
    margin-bottom: 50px;
-   background-color:#DDD0B3;
+   background-color: var(--SurfaceAlt);
+   color: var(--TextoSuave);
    margin: 0px 400px;
    border-radius: 0px 0px 25px 25px;
    margin-bottom: 50px;
