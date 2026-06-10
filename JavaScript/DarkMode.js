@@ -22,4 +22,4 @@ function AplicarTema() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', AplicarTema);//Mantem o darkmode salvo nas outras paginas
+document.addEventListener('DOMContentLoaded', AplicarTema); //Mantem o darkmode salvo nas outras paginas

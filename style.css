@@ -1,4 +1,4 @@
-/* Configuração do body e fconfigurações básicas */
+/* Configuração do body e configurações básicas */
 body {
     background-color: var(--Fundo);
     margin: 0;
@@ -85,6 +85,7 @@ nav {
 /* submenus no "receitas" */
 .menus {
     position: relative;
+    justify-items: center;
 }
 
 .BoasVindas {
@@ -137,6 +138,11 @@ nav {
     font-size: 1.5em;
     color: var(--AcentoClaro);
 }
+.MenuHeader{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
 /* Footer */
 footer {
@@ -161,6 +167,7 @@ footer a:hover {
 }
 
 .cont {
+    display: block;
     position: absolute;
     left: 50px;
     top: 290px;
@@ -187,3 +194,89 @@ footer a:hover {
     width: 80px;
     fill: var(--MarromMedio);
 }
+
+/* Menu Hambueguer */
+i#Burguer {
+    display: none;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px){
+
+
+    header {
+        position: relative;
+        justify-content: center;
+        position: sticky;
+        top: 0;          
+        z-index: 1000;  
+    }
+
+    header .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header a:first-child {
+        margin: 0 auto;
+    }
+
+    /* Menu hamburger */
+    i#Burguer{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.9em;
+        color: var(--AcentoClaro);
+        justify-content: baseline;
+        cursor: pointer;
+    }
+    /* Fim hamburger */
+
+    /* Nav abaixo do menu */
+    .MenuHeader{
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: -60px;
+        width: 180px;
+        background: var(--HeaderBg);
+        border-radius: 0px 0px 0px 10px;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    .MenuHeader a {
+        text-align: left;
+        width: 100%;
+        margin: 1px;
+        padding: 0.5px;
+    }
+    /* Fim do nav */
+    .cont{
+        display: none;
+    }
+    
+    .main {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .DarkButton {
+        margin-right: 80px;
+        font-size: 1.5em;
+
+    }
+
+    .entrar{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
