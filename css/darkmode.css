@@ -122,3 +122,20 @@ body.dark {
   --FiltroTempo:  invert(73%) sepia(5%) saturate(1291%) hue-rotate(340deg) brightness(91%) contrast(85%);
 }
  
+
+body,
+header,
+footer,
+main,
+section,
+article,
+.card{
+    transition:
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+}
+
+
+
+

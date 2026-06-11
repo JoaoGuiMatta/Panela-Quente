@@ -71,14 +71,15 @@ nav {
 
 /* class */
 .entrar {
-    color: var(--TextoBranco);
-    background-color: var(--HeaderBgEscuro);
-    padding: 10px;
+    color: var(--TextoGeral);
+    border: 2px solid var(--AcentoClaro);
+    padding: 5px 15px 5px 15px;
     border-radius: 10px;
 }
 
 .entrar:hover{
     text-decoration: none;
+    background-color: var(--AcentoClaro);
 }
 /* fim class */
 
@@ -132,12 +133,32 @@ nav {
 }
 /* fim do submenu */
 
+/* Botao de darkmode e animação */
 .DarkButton {
     margin-left: auto;
     margin-right: 50px;
     font-size: 1.5em;
     color: var(--AcentoClaro);
 }
+.DarkButton i {
+    display: inline-block; 
+    cursor: pointer;
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        filter .3s ease;
+}
+
+.animando {
+    opacity: 0;
+    transform: scale(.9); 
+}
+
+.aparecendo {
+    opacity: 0.9;
+    transform: scale(1.5);
+}
+/* Fim do botao darkmode */
 .MenuHeader{
     display: flex;
     align-items: center;
@@ -203,7 +224,7 @@ i#Burguer {
 /* Responsividade mobile */
 @media (max-width: 768px){
 
-
+    /* Header */
     header {
         position: relative;
         justify-content: center;
@@ -226,7 +247,7 @@ i#Burguer {
     i#Burguer{
         display: block;
         position: absolute;
-        right: 20px;
+        left: 20px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 1.9em;
@@ -242,10 +263,10 @@ i#Burguer {
         flex-direction: column;
         position: absolute;
         top: 100px;
-        right: -60px;
+        left: 0px;
         width: 180px;
         background: var(--HeaderBg);
-        border-radius: 0px 0px 0px 10px;
+        border-radius: 0px 0px 10px 0px;
         padding: 10px;
         z-index: 1000;
     }
@@ -255,29 +276,57 @@ i#Burguer {
         width: 100%;
         margin: 1px;
         padding: 0.5px;
+        background-color: var();
     }
     /* Fim do nav */
     .cont{
         display: none;
     }
     
-    .main {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .DarkButton {
-        margin-right: 80px;
-        font-size: 1.5em;
-
-    }
+    /* Fim header */
 
     .entrar{
         display: block;
         position: absolute;
-        left: 20px;
+        right: 20px;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    /* Boas vindas da pagina */
+    .BoasVindas {
+        text-align: left; 
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+
+    .BoasVindas h1 {
+        font-size: 1.8rem;
+    }
+
+    .BoasVindas h3 {
+        color: var(--Acento);
+    }
+
+    .BoasVindas h1 span {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .DarkButton {
+        margin-right: 100px;
+        font-size: 1.5em;
+
+    }
+
+    footer.d-flex {
+        flex-direction: column-reverse;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #RedesSociais a {
+        font-size: 1.5rem;
     }
 }
 

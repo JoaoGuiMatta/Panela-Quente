@@ -15,3 +15,28 @@
    border-radius: 0px 0px 25px 25px;
    margin-bottom: 50px;
 }
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+    .PagTitulo {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    
+        padding: 20px 15px !important; 
+        
+        /* Opcional: remove o arredondado de baixo se quiser que ele ocupe a largura toda como um banner direto */
+        border-radius: 0px; 
+    }
+
+    .PagTitulo h1 {
+        font-size: 1.3em !important;
+        line-height: 1.4;   
+    }
+
+    .PagTitulo h2 {
+        font-size: 1em !important;   /* Ajusta o subtítulo */
+        margin-top: 10px;
+    }
+}

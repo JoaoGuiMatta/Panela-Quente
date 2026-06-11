@@ -1,115 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PanelaQuente - Receitas saborosas</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/receitas.css">
-    <link rel="shortcut icon" href="../PanelaQuenteFavicon/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../css/darkmode.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/receitas.css" />
+    <link
+      rel="shortcut icon"
+      href="../PanelaQuenteFavicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/darkmode.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="../index.html"><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"></a>
-        <nav>
-            <div class="menus">
-                <a href="../index.html" class="receitas">Receitas</a>
-                <div class="submenu">
-                    <a href="../Paginas/Manha.html">Café da Manhã</a>
-                    <a href="../Paginas/Almoco.html">Almoço/janta</a>
-                    <a href="../Paginas/Tarde.html">Café da Tarde</a>
-                </div>
+      <a href="../index.html" class="logo"
+        ><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"
+      /></a>
+
+      <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
+      <nav id="MenuHamburguer">
+        <!--Menu hamburguer-->
+
+        <div class="MenuHeader">
+          <div class="menus">
+            <a href="index.html" class="receitas">Receitas</a>
+            <div class="submenu">
+              <a href="../Paginas/Manha.html">Café da Manhã</a>
+              <a href="../Paginas/Almoco.html">Almoço/janta</a>
+              <a href="../Paginas/Tarde.html">Café da Tarde</a>
             </div>
-
-            <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
-
-            <a href="../Paginas/Sugestão.html">Sugestão do Dia</a>
-        </nav>
-
-        <div class="DarkButton" onclick="Darkmode()">
-            <i class="bi bi-moon"></i>
+          </div>
+          <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
+          <a href="../Paginas/Sugestão.html">Sugestão do Dia</a>
         </div>
-        
-        <div class="entrar">
-            <a href="../Paginas/login.html">Entrar</a>
-        </div>
+      </nav>
 
+      <div class="DarkButton" onclick="Darkmode()">
+        <i class="bi bi-moon"></i>
+      </div>
+
+      <div class="entrar">
+        <a href="../Paginas/login.html">Entrar</a>
+      </div>
     </header>
 
     <!-- receita -->
     <h1>Pão de Queijo</h1>
     <h5>Trem bão de mais sô</h5>
     <div class="elementos">
-        <h4><img src="../icons/Cronometro.svg" alt="Cronometro" class="Cronometro">: 40 minutos</h4>
-        <h4>Porções: 20 porções</h4>
+      <h4>
+        <img
+          src="../icons/Cronometro.svg"
+          alt="Cronometro"
+          class="Cronometro"
+        />: 40 minutos
+      </h4>
+      <h4>Porções: 20 porções</h4>
     </div>
-<ul class="ingredientes">
-    <li>2 xícaras de polvilho doce</li>
-    <li>1 xícara de queijo ralado</li>
-    <li>1 ovo</li>
-    <li>1/2 xícara de leite</li>
-    <li>1/4 de xícara de óleo</li>
-    <li>Sal a gosto</li>
-</ul>
+    <ul class="ingredientes">
+      <li>2 xícaras de polvilho doce</li>
+      <li>1 xícara de queijo ralado</li>
+      <li>1 ovo</li>
+      <li>1/2 xícara de leite</li>
+      <li>1/4 de xícara de óleo</li>
+      <li>Sal a gosto</li>
+    </ul>
 
-<ol class="preparo">
-
-    <li>
+    <ol class="preparo">
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">1</span>
-            <p>Misture o polvilho e o sal.</p>
+          <span class="Posicao">1</span>
+          <p>Misture o polvilho e o sal.</p>
         </div>
-    </li>
+      </li>
 
-    <li>
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">2</span>
-            <p>Aqueça o leite com o óleo e despeje na mistura.</p>
+          <span class="Posicao">2</span>
+          <p>Aqueça o leite com o óleo e despeje na mistura.</p>
         </div>
-    </li>
+      </li>
 
-    <li>
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">3</span>
-            <p>Adicione o ovo e o queijo.</p>
+          <span class="Posicao">3</span>
+          <p>Adicione o ovo e o queijo.</p>
         </div>
-    </li>
+      </li>
 
-    <li>
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">4</span>
-            <p>Misture até formar uma massa homogênea.</p>
+          <span class="Posicao">4</span>
+          <p>Misture até formar uma massa homogênea.</p>
         </div>
-    </li>
+      </li>
 
-    <li>
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">5</span>
-            <p>Faça bolinhas e coloque em uma forma.</p>
+          <span class="Posicao">5</span>
+          <p>Faça bolinhas e coloque em uma forma.</p>
         </div>
-    </li>
+      </li>
 
-    <li>
+      <li>
         <div class="ReceitasPasso">
-            <span class="Posicao">6</span>
-            <p>Asse por 25 minutos a 180°C.</p>
+          <span class="Posicao">6</span>
+          <p>Asse por 25 minutos a 180°C.</p>
         </div>
-    </li>
-
-</ol>
+      </li>
+    </ol>
 
     <footer class="d-flex justify-content-between align-items-center py-3 px-4">
-            <span>© 2025 Panela Quente</span>
-            <div class="d-flex gap-3">
-            <a href="https://github.com/JoaoGuiMatta"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-        </div>
+      <span>© 2026 Panela Quente</span>
+      <div class="d-flex gap-3">
+        <a href="https://github.com/JoaoGuiMatta"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
     </footer>
+
     <script src="../JavaScript/DarkMode.js"></script>
-</body>
+    <script src="../JavaScript/MenuHamburguer.js"></script>
+  </body>
 </html>

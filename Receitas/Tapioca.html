@@ -14,20 +14,23 @@
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"></a>
-        <nav>
-            <div class="menus">
-                <a href="../index.html" class="receitas">Receitas</a>
-                <div class="submenu">
-                    <a href="../Paginas/Manha.html">Café da Manhã</a>
-                    <a href="../Paginas/Almoco.html">Almoço/janta</a>
-                    <a href="../Paginas/Tarde.html">Café da Tarde</a>
+        <a href="../index.html" class="logo"><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"></a>
+
+        <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
+        <nav id="MenuHamburguer"> <!--Menu hamburguer-->
+
+            <div class="MenuHeader">
+                <div class="menus">
+                    <a href="index.html" class="receitas">Receitas</a>
+                    <div class="submenu">
+                        <a href="../Paginas/Manha.html">Café da Manhã</a>
+                        <a href="../Paginas/Almoco.html">Almoço/janta</a>
+                        <a href="../Paginas/Tarde.html">Café da Tarde</a>
+                    </div>
                 </div>
+                <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
+                <a href="../Paginas/Sugestão.html">Sugestão do Dia</a>
             </div>
-
-            <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
-
-            <a href="../Paginas/Sugestão.html">Sugestão do Dia</a>
         </nav>
 
         <div class="DarkButton" onclick="Darkmode()">
@@ -37,7 +40,6 @@
         <div class="entrar">
             <a href="../Paginas/login.html">Entrar</a>
         </div>
-
     </header>
 
     <!-- receita -->
@@ -102,13 +104,16 @@
 
 </ol>
 
-    <footer class="d-flex justify-content-between align-items-center py-3 px-4">
-            <span>© 2026 Panela Quente</span>
-            <div class="d-flex gap-3">
-            <a href="https://github.com/JoaoGuiMatta"><i class="bi bi-github"></i></a>
+   <footer class="d-flex justify-content-between align-items-center py-3 px-4 ">
+        <span>© 2026 Panela Quente</span>
+        <div class="d-flex gap-3" id="RedesSociais">
+            <a href="https://github.com/JoaoGuiMatta" target="_blank"><i class="bi bi-github"></i></a>
             <a href="#"><i class="bi bi-facebook"></i></a>
         </div>
     </footer>
+
+    
     <script src="../JavaScript/DarkMode.js"></script>
+    <script src="../JavaScript/MenuHamburguer.js"></script>
 </body>
 </html>

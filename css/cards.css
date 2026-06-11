@@ -57,16 +57,17 @@
     text-align: center;
     background-color: var(--AcentoMedio);
     box-shadow: 2px 2px 2px 0px var(--SombraHorario);
-    display: inline-block;
-    margin: auto;
-
     display: block;
     width: fit-content;
     border-radius: 10px;
+    margin: auto; /* Mantém centralizado no desktop */
+    margin-bottom: 20px;
 }
 
 .horario h3 {
-    color: var(--Surface);
+    color: var(--Acento);
+    padding: 1px 10px;
+    margin: 0;
     
 }
 
@@ -85,4 +86,84 @@
     font-family: "Cause", cursive;
     font-weight: 500;
     font-size: 1em;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+
+    .horario {
+        margin-left: 1px;
+        margin-right: initial; 
+        text-align: left; 
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .carossel {
+        flex-direction: column;
+        overflow-x: visible;
+        padding: 10px;
+        gap: 15px;
+    }
+
+   
+    .carossel .card-receita {
+        display: grid !important;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto auto;   
+        height: 100px;
+        min-width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .carossel .card-receita > a {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .carossel .card-receita > a img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .carossel .card-receita h3 {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 1rem !important;
+        padding-top: 15px !important;
+        padding-left: 15px !important;
+        margin-bottom: 0 !important;
+        text-align: left;
+        width: 100% !important;
+    }
+
+
+    .carossel .card-receita h4 {
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 0.85rem;
+        margin-top: 2px !important; 
+        padding-left: 15px !important; 
+        padding-bottom: 15px !important;
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        width: 100% !important;
+    }
+
+
+    .carossel .card-receita .tempo {
+        width: 16px !important;
+        height: 16px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: inline-block;
+    }
 }
