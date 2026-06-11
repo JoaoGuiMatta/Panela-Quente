@@ -318,10 +318,13 @@ i#Burguer {
         margin-top: 5px;
     }
 
-    .DarkButton {
-        margin-right: 100px;
+    .DarkButton{
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 0;
         font-size: 1.5em;
-
     }
 
     footer.d-flex {

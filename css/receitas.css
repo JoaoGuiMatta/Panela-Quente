@@ -90,35 +90,36 @@ h5 {
 /* Responsividade mobile para a página de receitas */
 @media (max-width: 768px) {
 
-    /* Ajusta o subtítulo para não sumir com a margem fixa de 510px */
     h5 {
-        margin: -8px 20px 0 !important; /* Deixa uma margem pequena nas laterais */
-        padding: 5px 10px !important;
+        width: fit-content;
+        margin: -8px auto 0;
+        padding: 5px 15px;
+        border-radius: 0px 0px 7px 7px;
     }
 
-    /* Ajusta o bloco de informações (tempo e porções) */
     .elementos {
-        margin: 30px 250px !important;
-                /* Ocupa a largura da tela com um respiro nas laterais */
-        padding: 10px !important;       /* Dá espaço interno para as informações */
+        width: fit-content;
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 10px 20px;
+        text-align: center;
     }
 
-    /* Ajusta a lista de ingredientes para ocupar a tela inteira */
-   .ingredientes {
-        max-width: 90% !important;
-        margin: 20px auto !important;
-        border-radius: 15px !important;
-        padding: 10px !important;
+    .ingredientes {
+        max-width: 90%;
+        margin: 20px auto;
+        border-radius: 15px;
+        padding: 10px;
     }
 
     .preparo li {
-        margin-left: 20px !important;   /* Remove o recuo de 200px que jogava o texto para a direita */
-        margin-right: 20px !important;  /* Garante um respiro na borda direita */
-        padding: 15px 0 !important;     /* Compacta um pouco o espaçamento vertical */
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px 0;
     }
 
     .ReceitasPasso p {
-        font-size: 0.95rem !important;  /* Ajusta sutilmente o texto para telas menores */
-        line-height: 1.4 !important;    /* Melhora a leitura se o texto quebrar linha */
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 }
