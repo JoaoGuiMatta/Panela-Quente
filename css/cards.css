@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
 
 /* container do carrossel */
 .carossel {
@@ -15,13 +15,20 @@
 .card-receita {
     min-width: 200px;
     max-width: 200px;
-    background-color: var(--Surface); /* cor de superfície da sua paleta */
+    background-color: var(--Surface);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px var(--SombraCard);
-    transition: transform 0.2s; /* animação suave ao passar o mouse */
-    display: flex; /* adicionado */
-    flex-direction: column; /* adicionado — empilha imagem e texto */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-receita > a {
+    display: flex;         /* COMENTÁRIO: Faz o link virar flex vertical no PC */
+    flex-direction: column;/* COMENTÁRIO: Empilha o h3 e h4 dentro do link */
+    height: 100%;          /* COMENTÁRIO: Força o link a ocupar o tamanho todo do card */
+    text-decoration: none;
 }
 
 /* efeito ao passar o mouse */
@@ -41,9 +48,9 @@
     padding-top: 10px !important;
     padding-left: 10px !important;
     font-size: 0.9rem !important;
-    color: var(--TextoPrincipal); /* cor de texto da sua paleta */
+    color: var(--TextoPrincipal);
     text-align: left;
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important;
 }
 
 .TitulosCards h3 {
@@ -60,7 +67,7 @@
     display: block;
     width: fit-content;
     border-radius: 10px;
-    margin: auto; /* Mantém centralizado no desktop */
+    margin: auto;
     margin-bottom: 20px;
 }
 
@@ -68,7 +75,6 @@
     color: var(--Acento);
     padding: 1px 10px;
     margin: 0;
-    
 }
 
 .card-receita .tempo {
@@ -80,12 +86,16 @@
 }
 
 .card-receita h4 {
-    padding-left: 3px;
-    margin-top: auto;
+    padding-left: 10px;    /* COMENTÁRIO: Alinha o tempo horizontalmente com o h3 */
+    padding-bottom: 15px;  /* COMENTÁRIO: Cria o respiro interno na base do card */
+    margin-top: auto;      /* COMENTÁRIO: Empurra o tempo e o cronômetro para o rodapé */
     color: var(--TextoPrincipal);
     font-family: "Cause", cursive;
     font-weight: 500;
     font-size: 1em;
+    display: flex;         /* COMENTÁRIO: Ativa o flex para alinhar o ícone do relógio */
+    align-items: center;   /* COMENTÁRIO: Alinha o relógio verticalmente no meio do texto */
+    gap: 5px;              /* COMENTÁRIO: Cria um espacinho entre o relógio e o texto */
 }
 
 /* Responsividade mobile */
@@ -100,70 +110,70 @@
     }
 
     .carossel {
-        flex-direction: column;
-        overflow-x: visible;
+        flex-direction: column !important;
+        overflow-x: visible !important;
         padding: 10px;
         gap: 15px;
+        display: flex !important;
     }
 
-   
     .carossel .card-receita {
-        display: grid !important;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: auto auto;   
-        height: 100px;
-        min-width: 100%;
-        max-width: 100%;
-        overflow: hidden;
+        display: block !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 100px !important;
+        overflow: hidden !important;
     }
 
     .carossel .card-receita > a {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        display: block;
-        width: 100px;
-        height: 100px;
-    }
-    
-    .carossel .card-receita > a img {
+        display: grid !important;
+        grid-template-columns: 100px 1fr !important;
+        grid-template-rows: auto auto !important;
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover;
+        text-decoration: none !important;
     }
 
-    .carossel .card-receita h3 {
-        grid-column: 2;
-        grid-row: 1;
-        font-size: 1rem !important;
+    .carossel .card-receita > a img:not(.tempo) {
+        grid-column: 1 !important;
+        grid-row: 1 / span 2 !important;
+        width: 100px !important;
+        height: 100px !important;
+        object-fit: cover !important;
+    }
+
+    .carossel .card-receita > a h3 {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        font-size: 1.1rem !important;
         padding-top: 15px !important;
         padding-left: 15px !important;
-        margin-bottom: 0 !important;
-        text-align: left;
+        margin: 0 0 2px 0 !important;
+        text-align: left !important;
+        color: var(--TextoPrincipal) !important;
         width: 100% !important;
     }
 
-
-    .carossel .card-receita h4 {
-        grid-column: 2;
-        grid-row: 2;
-        font-size: 0.85rem;
-        margin-top: 2px !important; 
-        padding-left: 15px !important; 
+    .carossel .card-receita > a h4 {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+        font-size: 0.85rem !important;
+        margin: 0 !important;
+        padding-left: 15px !important;
         padding-bottom: 15px !important;
-        
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
+        color: var(--TextoPrincipal) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 5px !important;
         width: 100% !important;
     }
-
 
     .carossel .card-receita .tempo {
         width: 16px !important;
         height: 16px !important;
         padding: 0 !important;
         margin: 0 !important;
-        display: inline-block;
+        display: inline-block !important;
     }
 }

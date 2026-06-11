@@ -30,8 +30,8 @@ h5 {
 /* ingredientes */
 .ingredientes {
     background-color: var(--SurfaceIngredientes);
-    margin-right: 1000px;
-    margin-left: 50px;
+    max-width: 400px;
+    margin: 30px auto !important;
     border-radius: 30px;
     text-align: center;
     list-style: none;
@@ -86,3 +86,39 @@ h5 {
     filter: var(--FiltroTempo);
 }
 
+
+/* Responsividade mobile para a página de receitas */
+@media (max-width: 768px) {
+
+    /* Ajusta o subtítulo para não sumir com a margem fixa de 510px */
+    h5 {
+        margin: -8px 20px 0 !important; /* Deixa uma margem pequena nas laterais */
+        padding: 5px 10px !important;
+    }
+
+    /* Ajusta o bloco de informações (tempo e porções) */
+    .elementos {
+        margin: 30px 250px !important;
+                /* Ocupa a largura da tela com um respiro nas laterais */
+        padding: 10px !important;       /* Dá espaço interno para as informações */
+    }
+
+    /* Ajusta a lista de ingredientes para ocupar a tela inteira */
+   .ingredientes {
+        max-width: 90% !important;
+        margin: 20px auto !important;
+        border-radius: 15px !important;
+        padding: 10px !important;
+    }
+
+    .preparo li {
+        margin-left: 20px !important;   /* Remove o recuo de 200px que jogava o texto para a direita */
+        margin-right: 20px !important;  /* Garante um respiro na borda direita */
+        padding: 15px 0 !important;     /* Compacta um pouco o espaçamento vertical */
+    }
+
+    .ReceitasPasso p {
+        font-size: 0.95rem !important;  /* Ajusta sutilmente o texto para telas menores */
+        line-height: 1.4 !important;    /* Melhora a leitura se o texto quebrar linha */
+    }
+}

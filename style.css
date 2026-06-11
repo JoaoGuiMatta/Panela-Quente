@@ -135,7 +135,7 @@ nav {
 
 /* Botao de darkmode e animação */
 .DarkButton {
-    margin-left: auto;
+   
     margin-right: 50px;
     font-size: 1.5em;
     color: var(--AcentoClaro);
@@ -231,6 +231,11 @@ i#Burguer {
         position: sticky;
         top: 0;          
         z-index: 1000;  
+    }
+
+    header #Logo {
+       height: 120px;
+        width: auto;
     }
 
     header .logo {
