@@ -40,3 +40,20 @@
         margin-top: 10px;
     }
 }
+
+/* Responsividade Tablet */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .PagTitulo{
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    .PagTitulo h1{
+        font-size: 1.4em;
+    }
+
+    .PagTitulo h2{
+        font-size: 1.05em;
+    }
+}

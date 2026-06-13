@@ -21,7 +21,7 @@
 
             <div class="MenuHeader">
                 <div class="menus">
-                    <a href="index.html" class="receitas">Receitas</a>
+                    <a href="index.html" class="receitas" onclick="toggleSubmenu(event)">Receitas</a>
                     <div class="submenu">
                         <a href="Paginas/Manha.html">Café da Manhã</a>
                         <a href="Paginas/Almoco.html">Almoço/janta</a>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <a href="Paginas/CriarReceita.html">Crie a Sua</a>
-                <a href="Paginas/Sugestão.html">Sugestão do Dia</a>
+                <a href="#" onclick="ReceitaAleatoria()">Sugestão do Dia</a>
             </div>
         </nav>
 
@@ -169,5 +169,6 @@
     <!-- Arquivos JavaScript -->
     <script src="JavaScript/DarkMode.js"></script>
     <script src="JavaScript/MenuHamburguer.js"></script>
+    <script src="JavaScript/ReceitaAleatoria.js"></script>
 </body>
 </html>

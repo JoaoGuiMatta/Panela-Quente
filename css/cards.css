@@ -72,7 +72,7 @@
 }
 
 .horario h3 {
-    color: var(--Acento);
+    color: var(--TextoPrincipal);
     padding: 1px 10px;
     margin: 0;
 }
@@ -175,5 +175,28 @@
         padding: 0 !important;
         margin: 0 !important;
         display: inline-block !important;
+    }
+}
+
+/* Responsividade Tablet */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .carossel{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card-receita{
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .card-receita img{
+        height: 140px;
+    }
+
+    .TitulosCards h3{
+        font-size: 1.3rem;
     }
 }

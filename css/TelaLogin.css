@@ -90,3 +90,28 @@ header {
     width: 350px;
     margin-top: 150px;
 }
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+
+    .tela-login {
+        align-items: stretch; 
+        padding: 0;
+    }
+
+    .login-card {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0; 
+        padding: 40px 25px; 
+    }
+}
+
+/* Responsividade Tablet */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .login-card{
+        width: 80%;
+        max-width: 550px;
+    }
+}

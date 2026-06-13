@@ -89,3 +89,36 @@ h4 {
     border-top: 3px solid var(--SurfaceMedio);
     border-bottom: 3px solid  var(--SurfaceMedio);
 }
+
+@media (max-width: 768px){
+        .tela-cadastro {
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .cadastro-card {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 40px 25px;
+    }
+}
+
+/* Responsividade Tablet */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .cadastro{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .imagem{
+        width: 250px;
+        margin-top: 50px;
+    }
+
+    .cadastro-card{
+        width: 90%;
+        max-width: 700px;
+    }
+}
