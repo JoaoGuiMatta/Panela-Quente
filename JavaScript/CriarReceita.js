@@ -34,11 +34,11 @@ function validarReceita() {
     return false;
   }
   if (!descricao) {
-    alert("Digite a descriÃ§Ã£o da receita");
+    alert("Digite a descrição da receita");
     return false;
   }
   if (!tempo || tempo <= 0) {
-    alert("Digite um tempo vÃ¡lido");
+    alert("Digite um tempo válido");
     return false;
   }
   if (categoria === "Escolha uma Categoria") {

@@ -35,8 +35,8 @@ function validarEtapa1() {
 
   // verifica se o nome do usuario esta vazio
   const nome = document.getElementById("NomeUsuario").value.trim();
-  if (nome.length < 15 || nome.length > 60 || !/^[a-zA-ZÃ€-Ã¿\s]+$/.test(nome)) {
-    Erro("NomeUsuario", "Nome deve ter entre 15 e 60 caracteres alfabÃ©ticos");
+  if (nome.length < 15 || nome.length > 60 || !/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
+    Erro("NomeUsuario", "Nome deve ter entre 15 e 60 caracteres alfabéticos");
     valido = false;
   } else {
     setOk("NomeUsuario");
@@ -46,7 +46,7 @@ function validarEtapa1() {
   // verifica de o nome materno está vazio
   const nomeMae = document.getElementById("NomeMae").value.trim();
   if (!nomeMae) {
-    Erro("NomeMae", "Campo obrigatÃ³rio");
+    Erro("NomeMae", "Campo obrigatório");
     valido = false;
   } else {
     setOk("NomeMae");
@@ -55,7 +55,7 @@ function validarEtapa1() {
   // verifica se a data de nascimento está vazia
   const nasc = document.getElementById("Nasc").value;
   if (!nasc) {
-    Erro("Nasc", "Campo obrigatÃ³rio");
+    Erro("Nasc", "Campo obrigatório");
     valido = false;
   } else {
     setOk("Nasc");
@@ -64,7 +64,7 @@ function validarEtapa1() {
   // verifica se o usuario escolheu alguma opçao
   const sexo = document.getElementById("Sexo").value;
   if (sexo === "Selecione") {
-    Erro("Sexo", "Selecione uma opÃ§Ã£o");
+    Erro("Sexo", "Selecione uma opção");
     valido = false;
   } else {
     setOk("Sexo");
@@ -73,7 +73,7 @@ function validarEtapa1() {
   // verifica se o cpf tem 11 digitos
   const cpf = document.getElementById("Cpf").value.replace(/\D/g, "");
   if (cpf.length !== 11) {
-    Erro("Cpf", "CPF invÃ¡lido");
+    Erro("Cpf", "CPF inválido");
     valido = false;
   } else {
     setOk("Cpf");
@@ -83,7 +83,7 @@ function validarEtapa1() {
   // verifica se o numero de celular está vazio
   const cel = document.getElementById("Cel").value;
   if (!cel) {
-    Erro("Cel", "Campo obrigatÃ³rio");
+    Erro("Cel", "Campo obrigatório");
     valido = false;
   } else {
     setOk("Cel");
@@ -101,7 +101,7 @@ function validarEtapa2() {
   //verifica se o cep é tem 8 digitos
   const cep = document.getElementById("Cep").value.replace(/\D/g, "");
   if (cep.length !== 8) {
-    Erro("Cep", "CEP invÃ¡lido");
+    Erro("Cep", "CEP inválido");
     valido = false;
   } else {
     setOk("Cep");
@@ -109,7 +109,7 @@ function validarEtapa2() {
 
   const logradouro = document.getElementById("Logradouro").value.trim();
   if (!logradouro) {
-    Erro("Logradouro", "Campo obrigatÃ³rio");
+    Erro("Logradouro", "Campo obrigatório");
     valido = false;
   } else {
     setOk("Logradouro");
@@ -117,7 +117,7 @@ function validarEtapa2() {
 
   const numero = document.getElementById("Numero").value.trim();
   if (!numero) {
-    Erro("Numero", "Campo obrigatÃ³rio");
+    Erro("Numero", "Campo obrigatório");
     valido = false;
   } else {
     setOk("Numero");
@@ -161,7 +161,7 @@ function validarEtapa3() {
   // verifica se o login tem 6 caracteres alfabéticos
   const login = document.getElementById("LoginCad").value.trim();
   if (!/^[a-zA-Z]{6}$/.test(login)) {
-    Erro("LoginCad", "Login deve ter exatamente 6 caracteres alfabÃ©ticos");
+    Erro("LoginCad", "Login deve ter exatamente 6 caracteres alfabéticos");
     valido = false;
   } else {
     setOk("LoginCad");
@@ -170,7 +170,7 @@ function validarEtapa3() {
   // verifica se a senha tem 8 caracteres alfabeticos
   const senha = document.getElementById("SenhaCad").value;
   if (!/^[a-zA-Z]{8}$/.test(senha)) {
-    Erro("SenhaCad", "Senha deve ter exatamente 8 caracteres alfabÃ©ticos");
+    Erro("SenhaCad", "Senha deve ter exatamente 8 caracteres alfabéticos");
     valido = false;
   } else {
     setOk("SenhaCad");
@@ -179,7 +179,7 @@ function validarEtapa3() {
   // verifica se a confirmação de senha e a senha original são as mesmas
   const confirmar = document.getElementById("ConfirmarSenha").value;
   if (confirmar !== senha) {
-    Erro("ConfirmarSenha", "Senhas nÃ£o coincidem");
+    Erro("ConfirmarSenha", "Senhas não coincidem");
     valido = false;
   } else {
     setOk("ConfirmarSenha");

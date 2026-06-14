@@ -47,7 +47,7 @@ function exibirReceitaUsuario() {
       });
     } else {
       const li = document.createElement('li');
-      li.textContent = 'Ingredientes nÃ£o informados';
+      li.textContent = 'Ingredientes não informados';
       listaIngredientes.appendChild(li);
     }
   } catch (error) {
