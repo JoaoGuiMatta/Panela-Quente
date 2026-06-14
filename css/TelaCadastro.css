@@ -195,7 +195,7 @@ h4 {
     margin-top: 150px;
 }
 
-.DarkButton {
+.cadastro .DarkButton {
     position: relative;
     left: 10%;
     margin-top: 155px;
@@ -239,7 +239,7 @@ h4 {
         margin-top: 50px;
     }
 
-    .DarkButton {
+    .cadastro .DarkButton {
         position: relative;
         left: -10%;
         margin-top: 40px;
@@ -269,7 +269,7 @@ h4 {
         margin-top: 80px;
     }
 
-    .DarkButton {
+    .cadastro .DarkButton {
         position: relative;
         left: 15%;
         margin-top: 78px;
