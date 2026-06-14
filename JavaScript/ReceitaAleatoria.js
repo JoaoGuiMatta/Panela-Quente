@@ -1,3 +1,4 @@
+//pega as receitas
 const receitasFixas = [
     "../Receitas/BoloDeCenoura.html",
     "../Receitas/Feijoada.html",
@@ -9,14 +10,16 @@ const receitasFixas = [
     "../Receitas/Strudel.html",
     "../Receitas/Tapioca.html",
 ]
+// =========================================================================================================
 
+// =========================================================================================================
+// sorteia elas entre si e mostra
 function ReceitaAleatoria() {
     const receitasUsuario = JSON.parse(localStorage.getItem('receitasUsuario')) || [];
     const totalFixas = receitasFixas.length;
     const total = totalFixas + receitasUsuario.length;
 
     if (total === totalFixas) {
-        // Se não tem receitas de usuário, vai pra uma fixa
         const indice = Math.floor(Math.random() * totalFixas);
         window.location.href = receitasFixas[indice];
         return;
@@ -32,3 +35,4 @@ function ReceitaAleatoria() {
         window.location.href = '../Paginas/ReceitaUsuario.html';
     }
 }
+// =========================================================================================================

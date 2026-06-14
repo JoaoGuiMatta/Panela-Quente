@@ -1,3 +1,4 @@
+
 body{
     background-color: var(--FundoAlt);
 }
@@ -70,7 +71,11 @@ h4 {
     font-size: 14px;
     margin-top: 5px;
 }
-/* Botoes de navegaçao entre as etapas */
+
+/* ========================================================================================================== */
+
+/* ========================================================================================================== */
+/* botao de navegação entre etapas */
 .Navegacao {
     display: flex;              
     justify-content: center;    
@@ -80,82 +85,85 @@ h4 {
     flex-direction: row-reverse; 
 }
 
-/* ── NOVO: Botões de navegação do cadastro ── */
-.Avancar { /* NOVO: base compartilhada entre Avançar e Voltar */
-    display: inline-flex;        /* NOVO: alinha ícone e texto lado a lado */
-    align-items: center;         /* NOVO: centraliza verticalmente */
-    justify-content: center;     /* NOVO: centraliza o texto dentro do botão */
-    gap: 8px;                    /* NOVO: espaço entre texto e seta */
-    border: none;                /* NOVO: sem borda padrão (sobrescrita no Voltar) */
-    border-radius: 10px;         /* NOVO: cantos arredondados */
-    font-family: 'Nunito', sans-serif; /* NOVO: fonte do projeto */
-    font-weight: 700;            /* NOVO: negrito */
-    cursor: pointer;             /* NOVO: cursor de mão */
+.Avancar { 
+    display: inline-flex;       
+    align-items: center;         
+    justify-content: center;   
+    gap: 8px;                    
+    border: none;               
+    border-radius: 10px;         
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 700;            
+    cursor: pointer;             
 }
 
-/* NOVO: Botão Avançar — maior, estilo primário (terracota) */
+
+/* botao avançar */
 .Avancar[onclick*="Avancar"] {
-    width: 60%;                                          /* NOVO: ocupa 60% do container, maior que o Voltar */
-    padding: 14px 28px;                                  /* NOVO: espaçamento interno generoso */
-    font-size: 17px;                                     /* NOVO: texto um pouco maior */
-    background-color: var(--Acento);                     /* NOVO: cor terracota do projeto */
-    color: #fff;                                         /* NOVO: texto branco */
-    box-shadow: 0 4px 12px rgba(196, 124, 58, 0.35);    /* NOVO: sombra colorida */
+    width: 60%;                                         
+    padding: 14px 28px;                                  
+    font-size: 17px;                                     
+    background-color: var(--Acento);                     
+    color: #fff;                                       
+    box-shadow: 0 4px 12px rgba(196, 124, 58, 0.35);   
 }
 
 .Avancar[onclick*="Avancar"]:hover {
-    background-color: var(--AcentoHover);              /* NOVO: terracota mais escuro no hover */
-    box-shadow: 0 6px 16px rgba(196, 124, 58, 0.5);   /* NOVO: sombra mais intensa no hover */
+    background-color: var(--AcentoHover);           
+    box-shadow: 0 6px 16px rgba(196, 124, 58, 0.5); 
 }
 
 .Avancar[onclick*="Avancar"]:active {
-    box-shadow: 0 2px 8px rgba(196, 124, 58, 0.3);    /* NOVO: sombra reduzida ao clicar */
+    box-shadow: 0 2px 8px rgba(196, 124, 58, 0.3);   
 }
 
-/* NOVO: Botão Voltar — menor, estilo outline, à esquerda */
+
+/* botao voltar */
 .Avancar[onclick*="Voltar"] {
-    width: 35%;                                /* NOVO: ocupa 35% do container, menor que o Avançar */
-    padding: 11px 16px;                        /* NOVO: espaçamento interno menor */
-    font-size: 14px;                           /* NOVO: texto menor que o Avançar */
-    background-color: transparent;             /* NOVO: fundo transparente */
-    color: var(--TextoSecundario);             /* NOVO: cor de texto do projeto */
-    border: 2px solid var(--SurfaceMedio);     /* NOVO: borda visível */
-    box-shadow: none;                          /* NOVO: sem sombra */
+    width: 35%;                                
+    padding: 11px 16px;                       
+    font-size: 14px;                           
+    background-color: transparent;            
+    color: var(--TextoSecundario);             
+    border: 2px solid var(--SurfaceMedio);     
+    box-shadow: none;                          
 }
 
 .Avancar[onclick*="Voltar"]:hover {
-    background-color: var(--SurfaceMedio); /* NOVO: preenche com a cor da borda no hover */
-    color: var(--TextoPrincipal);          /* NOVO: texto mais escuro no hover */
+    background-color: var(--SurfaceMedio); 
+    color: var(--TextoPrincipal);          
 
 }
 
-/* NOVO: Botão Voltar da Etapa 3 — não tem classe .Avancar no HTML */
+
+/* botao etapa3 */
 .Etapas button:not(.Avancar):not(.btn-cadastrar) {
-    display: inline-flex;                  /* NOVO: alinha conteúdo */
-    align-items: center;                   /* NOVO: centraliza verticalmente */
-    justify-content: center;               /* NOVO: centraliza o texto */
-    gap: 8px;                              /* NOVO: espaço entre seta e texto */
-    width: 35%;                            /* NOVO: mesmo tamanho do Voltar das outras etapas */
-    padding: 11px 16px;                    /* NOVO: espaçamento interno menor */
-    border: 2px solid var(--SurfaceMedio); /* NOVO: borda outline */
-    border-radius: 10px;                   /* NOVO: cantos arredondados */
-    background-color: transparent;         /* NOVO: fundo transparente */
-    color: var(--TextoSecundario);         /* NOVO: cor de texto */
-    font-family: 'Nunito', sans-serif;     /* NOVO: fonte do projeto */
-    font-size: 14px;                       /* NOVO: texto menor */
-    font-weight: 700;                      /* NOVO: negrito */
-    cursor: pointer;                       /* NOVO: cursor de mão */
-    transition: background-color 0.2s ease, transform 0.15s ease; /* NOVO: animações suaves */
+    display: inline-flex;                
+    align-items: center;                 
+    justify-content: center;             
+    gap: 8px;                           
+    width: 35%;                         
+    padding: 11px 16px;                 
+    border: 2px solid var(--SurfaceMedio);
+    border-radius: 10px;                
+    background-color: transparent;       
+    color: var(--TextoSecundario);       
+    font-family: 'Nunito', sans-serif;   
+    font-size: 14px;                     
+    font-weight: 700;                    
+    cursor: pointer;                     
+    transition: background-color 0.2s ease,
 }
 
 .Etapas button:not(.Avancar):not(.btn-cadastrar):hover {
-    background-color: var(--SurfaceMedio); /* NOVO: preenche no hover */
-    color: var(--TextoPrincipal);          /* NOVO: texto mais escuro no hover */
+    background-color: var(--SurfaceMedio);
+    color: var(--TextoPrincipal);         
 
 }
+/* ========================================================================================================== */
 
-
-/* Etapa 3: Cadastrar em cima e Voltar embaixo */
+/* ========================================================================================================== */
+/* botao de cadastrar e voltar da etapa3 */
 #Etapa3 .Navegacao {
     display: flex;
     flex-direction: column;
@@ -210,7 +218,10 @@ h4 {
 .LinkLogin a {
     color: #c96a2b;
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
+/* responsividade mobile */
 @media (max-width: 768px){
 
     .tela-cadastro {
@@ -242,8 +253,10 @@ h4 {
         padding: 40px 25px;
     }
 }
+/* ========================================================================================================== */  
 
-/* Responsividade Tablet */
+/* ========================================================================================================== */
+/* repsonsividade tablet */
 @media (min-width: 769px) and (max-width: 1024px){
 
     .cadastro{

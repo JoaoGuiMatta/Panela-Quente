@@ -1,8 +1,4 @@
-// ═══════════════════════════════════════════════════════════
-// CriarReceita.js — APENAS para criar receitas
-// ═══════════════════════════════════════════════════════════
-
-// Adicona os passos
+// adiciona os passos da receita
 function adicionarPasso() {
   const passo = document.getElementById("Passo").value.trim();
   if (!passo) return;
@@ -14,15 +10,18 @@ function adicionarPasso() {
   document.getElementById("Passo").value = "";
 }
 
-// Conversor de tempo
+// =========================================================================================================
+// converte o tempo 
 function converterTempo(minutos) {
   if (minutos < 60) return minutos + " min";
   const horas = Math.floor(minutos / 60);
   const min = minutos % 60;
   return min === 0 ? horas + "h" : horas + "h " + min + "min";
 }
+// =========================================================================================================
 
-// Validação do formulário
+// =========================================================================================================
+// valida o formulario
 function validarReceita() {
   const nome = document.getElementById("NomeReceita").value.trim();
   const descricao = document.getElementById("Descricao").value.trim();
@@ -35,11 +34,11 @@ function validarReceita() {
     return false;
   }
   if (!descricao) {
-    alert("Digite a descrição da receita");
+    alert("Digite a descriÃ§Ã£o da receita");
     return false;
   }
   if (!tempo || tempo <= 0) {
-    alert("Digite um tempo válido");
+    alert("Digite um tempo vÃ¡lido");
     return false;
   }
   if (categoria === "Escolha uma Categoria") {
@@ -53,21 +52,27 @@ function validarReceita() {
 
   return true;
 }
+// =========================================================================================================
 
-// Salva a receita
+// =========================================================================================================
+// envia o formulario
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   if (!validarReceita()) return;
+// =========================================================================================================
 
-  // Pega os ingredientes do textarea
+// =========================================================================================================
+// pega os ingredientes
   const ingredientesTexto = document.getElementById("Ingredientes").value.trim();
   const ingredientes = ingredientesTexto
     .split("\n")
     .map(ing => ing.trim())
     .filter(ing => ing !== "");
-
-  // Pega a foto em base64
+    // =========================================================================================================
+    
+  // =========================================================================================================
+  // pega a foto
   const arquivo = document.getElementById("Foto").files[0];
   const reader = new FileReader();
 
@@ -83,9 +88,11 @@ document.querySelector("form").addEventListener("submit", function (e) {
       ),
       ingredientes: ingredientes,
     };
+// =========================================================================================================
 
-    // Pega receitas já salvas
-    const receitas = JSON.parse(localStorage.getItem("receitasUsuario")) || [];
+// =========================================================================================================
+// salva as receitas
+  const receitas = JSON.parse(localStorage.getItem("receitasUsuario")) || [];
     receitas.push(receita);
     localStorage.setItem("receitasUsuario", JSON.stringify(receitas));
 

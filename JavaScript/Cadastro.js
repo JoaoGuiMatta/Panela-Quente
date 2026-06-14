@@ -1,4 +1,4 @@
-// Mascaras via Jquery
+// mascaras via JQuery
 $("#Cpf").mask("000.000.000-00", { reverse: true });
 $("#Cep").mask("00000-000");
 $("#Cel").mask("(00) 00000-0000");
@@ -7,7 +7,7 @@ $("#Nasc").mask("00/00/0000");
 //==========================================================================================================
 
 //==========================================================================================================
-// Mudar etapas do cadastro
+// muda etapa do cadastro
 function Avancar(numero) {
   if (numero === 2 && !validarEtapa1()) return;
   if (numero === 3 && !validarEtapa2()) return;
@@ -16,7 +16,10 @@ function Avancar(numero) {
     .forEach((e) => (e.style.display = "none"));
   document.getElementById(`Etapa${numero}`).style.display = "block";
 }
+//==========================================================================================================
 
+//==========================================================================================================
+// volta etapa anterior
 function Voltar(numero) {
   document
     .querySelectorAll(".Etapas")
@@ -26,59 +29,61 @@ function Voltar(numero) {
 //==========================================================================================================
 
 //==========================================================================================================
-// Validações das etapas (etapa1)
+// valida etapa 1
 function validarEtapa1() {
-  let valido = true; // o Programa começa assumindo que tudo está preenchido
+  let valido = true; 
 
-  // Verifica se o nome do usuário só tem letras e está entre 15 a 60 caracteres
+  // verifica se o nome do usuario esta vazio
   const nome = document.getElementById("NomeUsuario").value.trim();
-  if (nome.length < 15 || nome.length > 60 || !/^[a-zA-ZÀ-ÿ\s]+$/.test(nome)) {
-    Erro("NomeUsuario", "Nome deve ter entre 15 e 60 caracteres alfabéticos");
+  if (nome.length < 15 || nome.length > 60 || !/^[a-zA-ZÃ€-Ã¿\s]+$/.test(nome)) {
+    Erro("NomeUsuario", "Nome deve ter entre 15 e 60 caracteres alfabÃ©ticos");
     valido = false;
   } else {
     setOk("NomeUsuario");
   }
 
-  // Verifica se o nome materno está vazio
+
+  // verifica de o nome materno está vazio
   const nomeMae = document.getElementById("NomeMae").value.trim();
   if (!nomeMae) {
-    Erro("NomeMae", "Campo obrigatório");
+    Erro("NomeMae", "Campo obrigatÃ³rio");
     valido = false;
   } else {
     setOk("NomeMae");
   }
 
-  // Verifica se a data de nascimento está vazio
+  // verifica se a data de nascimento está vazia
   const nasc = document.getElementById("Nasc").value;
   if (!nasc) {
-    Erro("Nasc", "Campo obrigatório");
+    Erro("Nasc", "Campo obrigatÃ³rio");
     valido = false;
   } else {
     setOk("Nasc");
   }
 
-  // Verifica se o usuário selecionou alguma opção
+  // verifica se o usuario escolheu alguma opçao
   const sexo = document.getElementById("Sexo").value;
   if (sexo === "Selecione") {
-    Erro("Sexo", "Selecione uma opção");
+    Erro("Sexo", "Selecione uma opÃ§Ã£o");
     valido = false;
   } else {
     setOk("Sexo");
   }
 
-  // Verifica se o cpf está com 11 digitos
+  // verifica se o cpf tem 11 digitos
   const cpf = document.getElementById("Cpf").value.replace(/\D/g, "");
   if (cpf.length !== 11) {
-    Erro("Cpf", "CPF inválido");
+    Erro("Cpf", "CPF invÃ¡lido");
     valido = false;
   } else {
     setOk("Cpf");
   }
 
-  // Verifica se o numero de celular está vazio
+
+  // verifica se o numero de celular está vazio
   const cel = document.getElementById("Cel").value;
   if (!cel) {
-    Erro("Cel", "Campo obrigatório");
+    Erro("Cel", "Campo obrigatÃ³rio");
     valido = false;
   } else {
     setOk("Cel");
@@ -89,15 +94,14 @@ function validarEtapa1() {
 //==========================================================================================================
 
 //==========================================================================================================
-// Validações das etapas (etapa1)
+// validar etapa2
 function validarEtapa2() {
   let valido = true;
 
-  //
-
+  //verifica se o cep é tem 8 digitos
   const cep = document.getElementById("Cep").value.replace(/\D/g, "");
   if (cep.length !== 8) {
-    Erro("Cep", "CEP inválido");
+    Erro("Cep", "CEP invÃ¡lido");
     valido = false;
   } else {
     setOk("Cep");
@@ -105,7 +109,7 @@ function validarEtapa2() {
 
   const logradouro = document.getElementById("Logradouro").value.trim();
   if (!logradouro) {
-    Erro("Logradouro", "Campo obrigatório");
+    Erro("Logradouro", "Campo obrigatÃ³rio");
     valido = false;
   } else {
     setOk("Logradouro");
@@ -113,7 +117,7 @@ function validarEtapa2() {
 
   const numero = document.getElementById("Numero").value.trim();
   if (!numero) {
-    Erro("Numero", "Campo obrigatório");
+    Erro("Numero", "Campo obrigatÃ³rio");
     valido = false;
   } else {
     setOk("Numero");
@@ -124,7 +128,7 @@ function validarEtapa2() {
 //==========================================================================================================
 
 //==========================================================================================================
-// Mensagem de erro
+// mensagem de erro
 function Erro(id, msg) {
   const campo = document.getElementById(id);
   campo.style.borderColor = "red";
@@ -137,7 +141,9 @@ function Erro(id, msg) {
   erro.textContent = msg;
   return false;
 }
+//==========================================================================================================
 
+// bloco verde caso a credencial esteja correta 
 function setOk(id) {
   const campo = document.getElementById(id);
   campo.style.borderColor = "green";
@@ -148,29 +154,32 @@ function setOk(id) {
 //==========================================================================================================
 
 //==========================================================================================================
-// ── VALIDAÇÃO ETAPA 3 ──
+// validar etapa3
 function validarEtapa3() {
   let valido = true;
 
+  // verifica se o login tem 6 caracteres alfabéticos
   const login = document.getElementById("LoginCad").value.trim();
   if (!/^[a-zA-Z]{6}$/.test(login)) {
-    Erro("LoginCad", "Login deve ter exatamente 6 caracteres alfabéticos");
+    Erro("LoginCad", "Login deve ter exatamente 6 caracteres alfabÃ©ticos");
     valido = false;
   } else {
     setOk("LoginCad");
   }
 
+  // verifica se a senha tem 8 caracteres alfabeticos
   const senha = document.getElementById("SenhaCad").value;
   if (!/^[a-zA-Z]{8}$/.test(senha)) {
-    Erro("SenhaCad", "Senha deve ter exatamente 8 caracteres alfabéticos");
+    Erro("SenhaCad", "Senha deve ter exatamente 8 caracteres alfabÃ©ticos");
     valido = false;
   } else {
     setOk("SenhaCad");
   }
 
+  // verifica se a confirmação de senha e a senha original são as mesmas
   const confirmar = document.getElementById("ConfirmarSenha").value;
   if (confirmar !== senha) {
-    Erro("ConfirmarSenha", "Senhas não coincidem");
+    Erro("ConfirmarSenha", "Senhas nÃ£o coincidem");
     valido = false;
   } else {
     setOk("ConfirmarSenha");
@@ -181,7 +190,7 @@ function validarEtapa3() {
 //==========================================================================================================
 
 //==========================================================================================================
-// Deixar salvo em LocalStorage
+// salva em LocalStorage
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   if (!validarEtapa3()) return;
@@ -195,14 +204,15 @@ document.querySelector("form").addEventListener("submit", function (e) {
   localStorage.setItem("usuario", JSON.stringify(usuario));
   localStorage.setItem("login", usuario.login);
   localStorage.setItem("senha", usuario.senha);
+  localStorage.setItem("usuarioLogado", usuario.login);
 
   alert("Cadastro realizado! Redirecionando...");
-  window.location.href = "login.html";
+  window.location.href = "../index.html";
 });
 //==========================================================================================================
 
 //==========================================================================================================
-// Buscar cep pelo VIACEP
+// busca o CEP pelo ViaCep
 document.getElementById("Cep").addEventListener("blur", function () {
   const cep = this.value.replace(/\D/g, "");
   if (cep.length !== 8) return;

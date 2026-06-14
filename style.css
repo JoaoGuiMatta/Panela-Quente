@@ -1,4 +1,13 @@
-/* Configuração do body e configurações básicas */
+/* ==============================Arquivo style.css================================================================== */
+/* CSS organizado por blocos para facilitar manutencao. */
+/* Fim Arquivo style.css */
+/* ========================================================================================================= */
+
+
+/* ==============================ConfiguraÃ§Ã£o do body e configuraÃ§Ãµes bÃ¡sicas================================================================== */
+/* ConfiguraÃ§Ã£o do body e configuraÃ§Ãµes bÃ¡sicas */
+/* Fim ConfiguraÃ§Ã£o do body e configuraÃ§Ãµes bÃ¡sicas */
+/* ========================================================================================================= */
 body {
   background-color: var(--FundoAlt);
   margin: 0;
@@ -31,6 +40,8 @@ a {
   text-decoration: none;
 }
 
+
+/* ==============================Header================================================================== */
 /* Header*/
 header {
   background-color: var(--HeaderBg);
@@ -50,8 +61,17 @@ header a {
   text-decoration: none;
   color: var(--TextoGeral);
 }
-/* fim header*/
 
+.MenuHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+/* Fim Header */
+/* ========================================================================================================= */
+
+
+/* ==============================nav================================================================== */
 /* nav */
 nav a {
   margin: 50px;
@@ -69,7 +89,11 @@ nav {
   margin: 0 auto;
 }
 /* fim nav*/
+/* Fim nav */
+/* ========================================================================================================= */
 
+
+/* ==============================class================================================================== */
 /* class */
 .entrar {
   color: var(--TextoGeral);
@@ -82,8 +106,29 @@ nav {
   text-decoration: none;
   background-color: var(--AcentoClaro);
 }
-/* fim class */
 
+.perfil-botao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--TextoGeral);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.perfil-botao i {
+  color: var(--Acento);
+  font-size: 1.2rem;
+}
+/* fim class */
+/* Fim class */
+/* ========================================================================================================= */
+
+
+/* ==============================submenus no "receitas"================================================================== */
 /* submenus no "receitas" */
 .menus {
   position: relative;
@@ -131,8 +176,12 @@ nav {
   color: var(--TextoGeralHover);
 }
 /* fim do submenu */
+/* Fim submenus no "receitas" */
+/* ========================================================================================================= */
 
-/* Botao de darkmode e animação */
+
+/* ==============================darkmode================================================================== */
+/* darkmode */
 .DarkButton {
   margin-right: 50px;
   font-size: 1.5em;
@@ -143,9 +192,9 @@ nav {
   display: inline-block;
   cursor: pointer;
   transition:
-    transform 0.3s ease,
-    opacity 0.3s ease,
-    filter 0.3s ease;
+  transform 0.3s ease,
+  opacity 0.3s ease,
+  filter 0.3s ease;
 }
 
 .animando {
@@ -158,27 +207,27 @@ nav {
   transform: scale(1.5);
 }
 /* Fim do botao darkmode */
-.MenuHeader {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+/* Fim darkmode */
+/* ========================================================================================================= */
 
+
+
+/* ==============================Footer================================================================== */
 /* Footer */
 footer {
   background-color: var(--HeaderBg); /* cor de fundo do footer */
   color: var(--TextoGeral); /* cor do texto */
   margin-top: auto; /* empurra o footer pra baixo */
-  font-size: 1rem; /* deixa os ícones maiores */
+  font-size: 1rem; /* deixa os Ã­cones maiores */
   flex-direction: column-reverse;
   gap: 20px;
   text-align: center;
 }
 
 footer a {
-  color: var(--Acento); /* cor dos ícones */
-  font-size: 1.2rem; /* tamanho dos ícones */
-  text-decoration: none; /* tira a decoração do texto */
+  color: var(--Acento); /* cor dos Ã­cones */
+  font-size: 1.2rem; /* tamanho dos Ã­cones */
+  text-decoration: none; /* tira a decoraÃ§Ã£o do texto */
 }
 
 footer span {
@@ -188,6 +237,8 @@ footer span {
 footer a:hover {
   color: var(--AcentoClaro); /* cor ao passar o mouse */
 }
+/* Fim Footer */
+/* ========================================================================================================= */
 
 .cont {
   display: block;
@@ -217,11 +268,17 @@ footer a:hover {
   fill: var(--MarromMedio);
 }
 
+
+/* ==============================Menu Hambueguer================================================================== */
 /* Menu Hambueguer */
 i#Burguer {
   display: none;
 }
+/* Fim Menu Hambueguer */
+/* ========================================================================================================= */
 
+
+/* ==============================Icone de entrar ao criar conta================================================================== */
 /* Icone de entrar ao criar conta */
 .entrar {
   position: relative;
@@ -254,45 +311,68 @@ i#Burguer {
   font-size: 0.85rem;
 }
 
+.MenuPerfil button {
+  border: 0;
+  background: transparent;
+  color: var(--Acento);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.MenuPerfil button:hover {
+  color: var(--TextoGeralHover);
+}
+
 .entrar:hover .MenuPerfil {
   display: block;
 }
 /* Fim Icone */
 /* ========================================================================================================= */
 
-/* Responsividade mobile */
+
+/* ==============================Responsividade mobile================================================================== */
 @media (max-width: 768px) {
+  
+  /* ==============================Header================================================================== */
   /* Header */
-  header {
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+  /* Fim Header */
+/* ========================================================================================================= */
+header {
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  header #Logo {
-    height: 120px;
-    width: auto;
-  }
+header #Logo {
+  height: 120px;
+  width: auto;
+}
 
-  header .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  header a:first-child {
-    margin: 0 auto;
-  }
-  /* ========================================================================================================= */
+header a:first-child {
+  margin: 0 auto;
+}
+/* ========================================================================================================= */
 
-  /* ========================================================================================================= */
-  /* Menu hamburger */
-  i#Burguer {
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 50%;
+/* ========================================================================================================= */
+
+/* ==============================Menu hamburger================================================================== */
+/* Menu hamburger */
+/* Fim Menu hamburger */
+/* ========================================================================================================= */
+i#Burguer {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
     transform: translateY(-50%);
     font-size: 1.9em;
     color: var(--AcentoClaro);
@@ -300,9 +380,13 @@ i#Burguer {
   }
   /* Fim hamburger */
   /* ========================================================================================================= */
-
+  
   /* ========================================================================================================= */
+  
+  /* ==============================Nav abaixo do menu================================================================== */
   /* Nav abaixo do menu */
+  /* Fim Nav abaixo do menu */
+  /* ========================================================================================================= */
   .MenuHeader {
     display: none;
     flex-direction: column;
@@ -315,14 +399,14 @@ i#Burguer {
     z-index: 1000;
     border-radius: 0px 0px 15px 0px;
   }
-
+  
   .MenuHeader a {
     text-align: left;
     width: 100%;
     margin: 1px;
     padding: 0.5px;
   }
-
+  
   .menus {
     width: 100%;
     display: block;
@@ -341,32 +425,32 @@ i#Burguer {
     padding-right: 0px;
     box-sizing: border-box;
   }
-
+  
   .menus .submenu a {
     background-color: var(--HeaderBg);
     margin: 5px 5px;
     text-align: center;
     width: auto;
   }
-
+  
   .menus:hover .submenu {
     display: none;
   }
-
+  
   .menus .submenu.aberto {
-    display: block; /* adicionado — só abre via JS */
+    display: block; /* adicionado â€” sÃ³ abre via JS */
   }
   /* Fim do nav */
   /* ========================================================================================================= */
-
+  
   /* ========================================================================================================= */
   .cont {
     display: none;
   }
   /* ========================================================================================================= */
-
+  
   /* Fim header */
-
+  
   .entrar {
     display: block;
     position: absolute;
@@ -374,27 +458,29 @@ i#Burguer {
     top: 50%;
     transform: translateY(-50%);
   }
-
+  
+  
   /* Boas vindas da pagina */
+  /* ========================================================================================================= */
   .BoasVindas {
     text-align: left;
     margin-top: 30px;
     padding-left: 10px;
   }
-
+  
   .BoasVindas h1 {
     font-size: 1.8rem;
   }
-
+  
   .BoasVindas h3 {
     color: var(--Acento);
   }
-
+  
   .BoasVindas h1 span {
     display: block;
     margin-top: 5px;
   }
-
+  
   .DarkButton {
     position: absolute;
     left: 100px;
@@ -403,54 +489,62 @@ i#Burguer {
     margin-right: 0;
     font-size: 1.5em;
   }
-
+  
   footer.d-flex {
     flex-direction: column-reverse;
     gap: 15px;
     text-align: center;
   }
-
+  
   #RedesSociais a {
     font-size: 1.5rem;
   }
 }
+/* ========================================================================================================= */
+
+
 
 /* Responsividade Tablet */
+
 @media (min-width: 769px) and (max-width: 1024px) {
   nav a {
     margin: 15px;
     padding: 5px;
   }
-
+  
   nav {
     gap: 10px;
   }
-
+  
   .MenuHeader {
     gap: 15px;
   }
-
+  
   .DarkButton {
     margin-right: 20px;
   }
-
+  
   .BoasVindas {
     padding: 0 20px;
   }
-
+  
   .BoasVindas h1 {
     font-size: 2rem;
   }
-
+  
   .BoasVindas h3 {
     font-size: 1.1rem;
   }
-
+  
   .cont {
     display: none;
   }
 }
+/* Fim Responsividade Tablet */
+/* ========================================================================================================= */
 
+
+/* ==============================@media (max-width: 1400px) ================================================================== */
 @media (max-width: 1400px) {
   .cont {
     width: clamp(160px, 18vw, 250px);

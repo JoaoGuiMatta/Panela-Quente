@@ -28,7 +28,9 @@ h5 {
 
 
 
-/* ingredientes */
+
+/* ========================================================================================================== */
+/* configuraçoes dos ingredientes */
 .ingredientes {
     background-color: var(--SurfaceIngredientes);
     max-width: 400px;
@@ -44,14 +46,17 @@ h5 {
 
 .ingredientes li {
     border-bottom: 1.5px solid var(--SurfaceMuted);
-    padding: 10px 20px; /* adicionado — mais respiro */
-    text-align: left; /* mudado — era center */
+    padding: 10px 20px; /* adicionado â€” mais respiro */
+    text-align: left; /* mudado â€” era center */
 }
 
 .ingredientes li:last-child {
-    border-bottom: none; /* adicionado — remove última linha */
+    border-bottom: none; /* adicionado â€” remove Ãºltima linha */
 }
-/* Congifuração dos passos */
+/* ========================================================================================================== */
+
+/* ========================================================================================================== */
+/* configurações dos passos */
 .preparo {
     list-style: none;
     padding: 0;
@@ -93,10 +98,10 @@ h5 {
 .Cronometro {
     filter: var(--FiltroTempo);
 }
+/* ========================================================================================================== */
 
-
-
-/* Responsividade mobile */
+/* ========================================================================================================== */
+/* responsividade mobile */
 @media (max-width: 768px) {
 
     h5 {
@@ -132,8 +137,10 @@ h5 {
         line-height: 1.4;
     }
 }
+/* ========================================================================================================== */
 
-/* Responsividade Tablet */
+/* ========================================================================================================== */
+/* responsividade tablet */
 @media (min-width: 769px) and (max-width: 1024px){
 
     h5{
@@ -157,3 +164,4 @@ h5 {
         margin-right: 60px;
     }
 }
+/* ========================================================================================================== */

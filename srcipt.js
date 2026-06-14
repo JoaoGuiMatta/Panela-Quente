@@ -1,19 +1,131 @@
-// mantém o usuário logado e cria um icone de perfil com o nome
-const usuarioLogado = localStorage.getItem('usuarioLogado')
-const btnEntrar = document.querySelector('.entrar')
-
-if (usuarioLogado && btnEntrar) {
-    // troca o conteúdo do botão
-    btnEntrar.innerHTML = `
-        <i class="bi bi-person-circle"></i>
-        <div class="MenuPerfil">
-            <span>${usuarioLogado}</span>
-            <a href="#" onclick="Sair()">Sair</a>
-        </div>
-    `
+// Adicona os passos
+function adicionarPasso() {
+  const passo = document.getElementById("Passo").value.trim();
+  if (!passo) return;
+  
+  const lista = document.getElementById("ListaPasso");
+  const item = document.createElement("li");
+  item.textContent = passo;
+  lista.appendChild(item);
+  document.getElementById("Passo").value = "";
 }
+// =========================================================================================================
 
-function Sair() {
-    localStorage.removeItem('usuarioLogado') // remove o usuário logado
-    window.location.reload() // recarrega a página
+// =========================================================================================================
+// Conversor de tempo
+function converterTempo(minutos) {
+  if (minutos < 60) return minutos + " min";
+  const horas = Math.floor(minutos / 60);
+  const min = minutos % 60;
+  return min === 0 ? horas + "h" : horas + "h " + min + "min";
 }
+// =========================================================================================================
+
+
+// =========================================================================================================
+// Validar formulario
+function validarReceita() {
+  const nome = document.getElementById("NomeReceita").value.trim();
+  const descricao = document.getElementById("Descricao").value.trim();
+  const tempo = document.getElementById("TempoReceita").value;
+  const categoria = document.getElementById("Categoria").value;
+  const passos = document.getElementById("ListaPasso").children.length;
+
+  if (!nome) {
+    alert("Digite o nome da receita");
+    return false;
+  }
+  if (!descricao) {
+    alert("Digite a descriÃ§Ã£o da receita");
+    return false;
+  }
+  if (!tempo || tempo <= 0) {
+    alert("Digite um tempo vÃ¡lido");
+    return false;
+  }
+  if (categoria === "Escolha uma Categoria") {
+    alert("Selecione uma categoria");
+    return false;
+  }
+  if (passos === 0) {
+    alert("Adicione pelo menos um passo");
+    return false;
+  }
+
+  return true;
+}
+// =========================================================================================================
+
+// Verifica login
+function verificarLogin() {
+  const usuarioLogado = localStorage.getItem('usuarioLogado');
+  if (!usuarioLogado) {
+    alert("VocÃª precisa estar logado para criar receitas!");
+    window.location.href = "../Paginas/login.html";
+    return false;
+  }
+  return true;
+}
+// =========================================================================================================
+
+// =========================================================================================================
+// envia o formulario
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (!verificarLogin()) return;
+// =========================================================================================================
+
+// =========================================================================================================
+// pega os ingredientes
+
+  const ingredientesTexto = document.getElementById("Ingredientes").value.trim();
+  const ingredientes = ingredientesTexto
+    .split("\n")
+    .map(ing => ing.trim())
+    .filter(ing => ing !== "");
+// Fim Pega os ingredientes do textarea
+// =========================================================================================================
+
+// pega a foto
+// =========================================================================================================
+  const arquivo = document.getElementById("Foto").files[0];
+  const reader = new FileReader();
+
+  const criarReceita = (fotoBase64) => {
+    const receita = {
+      nome: document.getElementById("NomeReceita").value.trim(),
+      descricao: document.getElementById("Descricao").value.trim(),
+      tempo: converterTempo(parseInt(document.getElementById("TempoReceita").value)),
+      categoria: document.getElementById("Categoria").value,
+      foto: fotoBase64,
+      passos: Array.from(document.getElementById("ListaPasso").children).map(
+        (li) => li.textContent
+      ),
+      ingredientes: ingredientes,
+      criador: localStorage.getItem('usuarioLogado')
+    };
+// =========================================================================================================
+
+// =========================================================================================================
+// salva em localStorage
+
+    const receitas = JSON.parse(localStorage.getItem("receitasUsuario")) || [];
+    receitas.push(receita);
+    localStorage.setItem("receitasUsuario", JSON.stringify(receitas));
+
+    alert("Receita salva com sucesso!");
+    window.location.href = "../index.html";
+  };
+
+  if (arquivo) {
+    reader.onload = function (ev) {
+      criarReceita(ev.target.result);
+    };
+    reader.readAsDataURL(arquivo);
+  } else {
+    criarReceita(null);
+  }
+});
+// Fim Salva em localStorage (permanente)
+// =========================================================================================================

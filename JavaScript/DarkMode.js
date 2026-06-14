@@ -1,3 +1,4 @@
+// habilita o darkmode e faz a animação
 function Darkmode() {
   const icone = document.querySelector(".DarkButton i");
 
@@ -27,6 +28,10 @@ function Darkmode() {
   }, 350);
 }
 
+// =========================================================================================================
+
+// =========================================================================================================
+// troca o icone
 function AplicarTema() {
   const modo = localStorage.getItem("modo");
   const icone = document.querySelector(".DarkButton i");
@@ -39,6 +44,8 @@ function AplicarTema() {
     if (icone) icone.className = "bi bi-moon-fill";
   }
 }
+// =========================================================================================================
 
-// Mantém o darkmode salvo ao carregar a página
+// =========================================================================================================
+// mantem salvo
 document.addEventListener("DOMContentLoaded", AplicarTema);

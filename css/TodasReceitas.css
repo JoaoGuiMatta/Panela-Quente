@@ -1,3 +1,4 @@
+
 .PagTitulo h1 {
     font-size: 1.5em;
 }
@@ -16,6 +17,8 @@
    margin-bottom: 50px;
 }
 
+
+/* ========================================================================================================== */
 /* Responsividade mobile */
 @media (max-width: 768px) {
     .PagTitulo {
@@ -36,11 +39,13 @@
     }
 
     .PagTitulo h2 {
-        font-size: 1em !important;   /* Ajusta o subtítulo */
+        font-size: 1em !important;   /* Ajusta o subtÃ­tulo */
         margin-top: 10px;
     }
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
 /* Responsividade Tablet */
 @media (min-width: 769px) and (max-width: 1024px){
 

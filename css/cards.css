@@ -1,6 +1,10 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
 
-/* container do carrossel */
+
+/* ========================================================================================================== */
+/* div carrossel */
 .carossel {
     display: flex;
     gap: 30px;
@@ -10,7 +14,9 @@
     margin-bottom: 60px;
     align-items: stretch;
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
 /* cada card */
 .card-receita {
     min-width: 200px;
@@ -25,24 +31,30 @@
 }
 
 .card-receita > a {
-    display: flex;         /* COMENTÁRIO: Faz o link virar flex vertical no PC */
-    flex-direction: column;/* COMENTÁRIO: Empilha o h3 e h4 dentro do link */
-    height: 100%;          /* COMENTÁRIO: Força o link a ocupar o tamanho todo do card */
+    display: flex;         /* COMENTÃRIO: Faz o link virar flex vertical no PC */
+    flex-direction: column;/* COMENTÃRIO: Empilha o h3 e h4 dentro do link */
+    height: 100%;          /* COMENTÃRIO: ForÃ§a o link a ocupar o tamanho todo do card */
     text-decoration: none;
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
 /* efeito ao passar o mouse */
 .card-receita:hover {
     transform: translateY(-2px);
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
 /* imagem do card */
 .card-receita img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
+/* ========================================================================================================== */
 
+/* ========================================================================================================== */
 /* título da receita */
 .card-receita h3 {
     padding-top: 10px !important;
@@ -86,19 +98,21 @@
 }
 
 .card-receita h4 {
-    padding-left: 10px;    /* COMENTÁRIO: Alinha o tempo horizontalmente com o h3 */
-    padding-bottom: 15px;  /* COMENTÁRIO: Cria o respiro interno na base do card */
-    margin-top: auto;      /* COMENTÁRIO: Empurra o tempo e o cronômetro para o rodapé */
+    padding-left: 10px;   
+    padding-bottom: 15px; 
+    margin-top: auto;    
     color: var(--TextoPrincipal);
     font-family: "Cause", cursive;
     font-weight: 500;
     font-size: 1em;
-    display: flex;         /* COMENTÁRIO: Ativa o flex para alinhar o ícone do relógio */
-    align-items: center;   /* COMENTÁRIO: Alinha o relógio verticalmente no meio do texto */
-    gap: 5px;              /* COMENTÁRIO: Cria um espacinho entre o relógio e o texto */
+    display: flex;       
+    align-items: center; 
+    gap: 5px;            
 }
+/* ========================================================================================================== */
 
-/* Responsividade mobile */
+/* ========================================================================================================== */
+/* responsividade mobile */
 @media (max-width: 768px) {
 
     .horario {
@@ -177,8 +191,10 @@
         display: inline-block !important;
     }
 }
+/* ========================================================================================================== */
 
-/* Responsividade Tablet */
+/* ========================================================================================================== */
+/* responsividade tablet */
 @media (min-width: 769px) and (max-width: 1024px){
 
     .carossel{
@@ -200,3 +216,4 @@
         font-size: 1.3rem;
     }
 }
+/* ========================================================================================================== */
