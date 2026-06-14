@@ -1,14 +1,14 @@
 //pega as receitas
 const receitasFixas = [
-    "../Receitas/BoloDeCenoura.html",
-    "../Receitas/Feijoada.html",
-    "../Receitas/Lasanha.html",
-    "../Receitas/Omelete.html",
-    "../Receitas/PaoDeQueijo.html",
-    "../Receitas/Ratattouille.html",
-    "../Receitas/Sanduiche.html",
-    "../Receitas/Strudel.html",
-    "../Receitas/Tapioca.html",
+    "/Panela-Quente/Receitas/BoloDeCenoura.html",
+    "/Panela-Quente/Receitas/Feijoada.html",
+    "/Panela-Quente/Receitas/Lasanha.html",
+    "/Panela-Quente/Receitas/Omelete.html",
+    "/Panela-Quente/Receitas/PaoDeQueijo.html",
+    "/Panela-Quente/Receitas/Ratattouille.html",
+    "/Panela-Quente/Receitas/Sanduiche.html",
+    "/Panela-Quente/Receitas/Strudel.html",
+    "/Panela-Quente/Receitas/Tapioca.html",
 ]
 // =========================================================================================================
 

@@ -121,8 +121,15 @@ header {
     .DarkButton {
         position: relative;
         left: -10%;
-        margin-top: 180px;
-        font-size: 1.5rem;
+        margin-top: 200px;
+        font-size: 2rem;
+    }
+
+    .imagem {
+        position: relative;
+        left: 8%;
+        width: 280px;
+        margin-top: 150px;
     }
 
 }
@@ -139,9 +146,17 @@ header {
 
         .DarkButton {
         position: relative;
-        left: 10%;
+        left: 20%;
         margin-top: 140px;
         font-size: 2rem;
     }
+
+        .imagem {
+        position: relative;
+        left: 8%;
+        width: 250px;
+        margin-top: 150px;
+    }
+
 }
 /* ========================================================================================================== */
