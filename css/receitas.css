@@ -18,11 +18,12 @@ h5 {
 
 .elementos {
     background-color: var(--Surface);
-    margin: 20px 590px ;
-    padding: px 0px px 0px;
+    margin: 20px auto;
+    padding: 15px 30px;
     border-radius: 20px;
     text-align: center;
     color: var(--TextoSecundario);
+    width: fit-content;
 }
 
 
@@ -32,17 +33,23 @@ h5 {
     background-color: var(--SurfaceIngredientes);
     max-width: 400px;
     margin: 30px auto !important;
-    border-radius: 30px;
+    border-radius: 15px;
     text-align: center;
     list-style: none;
     padding: 0;
     overflow: hidden;
     color: var(--TextoSecundario);
+    box-shadow: 0 2px 10px var(--SombraSuave);
 }
 
 .ingredientes li {
     border-bottom: 1.5px solid var(--SurfaceMuted);
-    padding: 5px 0;
+    padding: 10px 20px; /* adicionado — mais respiro */
+    text-align: left; /* mudado — era center */
+}
+
+.ingredientes li:last-child {
+    border-bottom: none; /* adicionado — remove última linha */
 }
 /* Congifuração dos passos */
 .preparo {
@@ -53,7 +60,8 @@ h5 {
 .preparo li {
     border-bottom: 1px solid var(--BordaInput);
     padding: 20px 0;
-    margin-left: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .ReceitasPasso {
@@ -85,6 +93,7 @@ h5 {
 .Cronometro {
     filter: var(--FiltroTempo);
 }
+
 
 
 /* Responsividade mobile */

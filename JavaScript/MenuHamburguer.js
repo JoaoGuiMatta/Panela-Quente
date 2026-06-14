@@ -1,18 +1,18 @@
 function ClickMenu() {
-    const Menu = document.querySelector(".MenuHeader")
-    const Icone = document.getElementById("Burguer")
-    
-    if (Menu.style.display === "flex") {
-        Menu.style.display = "none"
-        Icone.className = "bi bi-list"
-    } else {
-        Menu.style.display = "flex"
-        Icone.className = "bi bi-x-lg"
-    }
+  const Menu = document.querySelector(".MenuHeader");
+  const Icone = document.getElementById("Burguer");
+
+  if (Menu.style.display === "flex") {
+    Menu.style.display = "none";
+    Icone.className = "bi bi-list";
+  } else {
+    Menu.style.display = "flex";
+    Icone.className = "bi bi-x-lg";
+  }
 }
 
 function toggleSubmenu(e) {
-    e.preventDefault()
-    const submenu = document.querySelector('.MenuHeader .submenu')
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block'
+  e.preventDefault();
+  const submenu = document.querySelector(".MenuHeader .submenu");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }

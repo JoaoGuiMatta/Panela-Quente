@@ -83,12 +83,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
     padding-bottom: 150px;
 }
 
 .imagem {
+    position: relative;
+    left: 8%;
     width: 350px;
     margin-top: 150px;
+}
+
+.DarkButton {
+    position: relative;
+    left: 10%;
+    margin-top: 155px;
+    font-size: 2.5rem;
 }
 
 /* Responsividade Mobile */
@@ -105,6 +115,14 @@ header {
         border-radius: 0; 
         padding: 40px 25px; 
     }
+
+    .DarkButton {
+        position: relative;
+        left: -10%;
+        margin-top: 180px;
+        font-size: 1.5rem;
+    }
+
 }
 
 /* Responsividade Tablet */
@@ -113,5 +131,12 @@ header {
     .login-card{
         width: 80%;
         max-width: 550px;
+    }
+
+        .DarkButton {
+        position: relative;
+        left: 10%;
+        margin-top: 140px;
+        font-size: 2rem;
     }
 }

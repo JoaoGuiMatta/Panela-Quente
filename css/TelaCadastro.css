@@ -70,17 +70,128 @@ h4 {
     font-size: 14px;
     margin-top: 5px;
 }
+/* Botoes de navegaçao entre as etapas */
+.Navegacao {
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 12px;                  
+    margin-top: 20px;           
+    flex-direction: row-reverse; 
+}
+
+/* ── NOVO: Botões de navegação do cadastro ── */
+.Avancar { /* NOVO: base compartilhada entre Avançar e Voltar */
+    display: inline-flex;        /* NOVO: alinha ícone e texto lado a lado */
+    align-items: center;         /* NOVO: centraliza verticalmente */
+    justify-content: center;     /* NOVO: centraliza o texto dentro do botão */
+    gap: 8px;                    /* NOVO: espaço entre texto e seta */
+    border: none;                /* NOVO: sem borda padrão (sobrescrita no Voltar) */
+    border-radius: 10px;         /* NOVO: cantos arredondados */
+    font-family: 'Nunito', sans-serif; /* NOVO: fonte do projeto */
+    font-weight: 700;            /* NOVO: negrito */
+    cursor: pointer;             /* NOVO: cursor de mão */
+}
+
+/* NOVO: Botão Avançar — maior, estilo primário (terracota) */
+.Avancar[onclick*="Avancar"] {
+    width: 60%;                                          /* NOVO: ocupa 60% do container, maior que o Voltar */
+    padding: 14px 28px;                                  /* NOVO: espaçamento interno generoso */
+    font-size: 17px;                                     /* NOVO: texto um pouco maior */
+    background-color: var(--Acento);                     /* NOVO: cor terracota do projeto */
+    color: #fff;                                         /* NOVO: texto branco */
+    box-shadow: 0 4px 12px rgba(196, 124, 58, 0.35);    /* NOVO: sombra colorida */
+}
+
+.Avancar[onclick*="Avancar"]:hover {
+    background-color: var(--AcentoHover);              /* NOVO: terracota mais escuro no hover */
+    box-shadow: 0 6px 16px rgba(196, 124, 58, 0.5);   /* NOVO: sombra mais intensa no hover */
+}
+
+.Avancar[onclick*="Avancar"]:active {
+    box-shadow: 0 2px 8px rgba(196, 124, 58, 0.3);    /* NOVO: sombra reduzida ao clicar */
+}
+
+/* NOVO: Botão Voltar — menor, estilo outline, à esquerda */
+.Avancar[onclick*="Voltar"] {
+    width: 35%;                                /* NOVO: ocupa 35% do container, menor que o Avançar */
+    padding: 11px 16px;                        /* NOVO: espaçamento interno menor */
+    font-size: 14px;                           /* NOVO: texto menor que o Avançar */
+    background-color: transparent;             /* NOVO: fundo transparente */
+    color: var(--TextoSecundario);             /* NOVO: cor de texto do projeto */
+    border: 2px solid var(--SurfaceMedio);     /* NOVO: borda visível */
+    box-shadow: none;                          /* NOVO: sem sombra */
+}
+
+.Avancar[onclick*="Voltar"]:hover {
+    background-color: var(--SurfaceMedio); /* NOVO: preenche com a cor da borda no hover */
+    color: var(--TextoPrincipal);          /* NOVO: texto mais escuro no hover */
+
+}
+
+/* NOVO: Botão Voltar da Etapa 3 — não tem classe .Avancar no HTML */
+.Etapas button:not(.Avancar):not(.btn-cadastrar) {
+    display: inline-flex;                  /* NOVO: alinha conteúdo */
+    align-items: center;                   /* NOVO: centraliza verticalmente */
+    justify-content: center;               /* NOVO: centraliza o texto */
+    gap: 8px;                              /* NOVO: espaço entre seta e texto */
+    width: 35%;                            /* NOVO: mesmo tamanho do Voltar das outras etapas */
+    padding: 11px 16px;                    /* NOVO: espaçamento interno menor */
+    border: 2px solid var(--SurfaceMedio); /* NOVO: borda outline */
+    border-radius: 10px;                   /* NOVO: cantos arredondados */
+    background-color: transparent;         /* NOVO: fundo transparente */
+    color: var(--TextoSecundario);         /* NOVO: cor de texto */
+    font-family: 'Nunito', sans-serif;     /* NOVO: fonte do projeto */
+    font-size: 14px;                       /* NOVO: texto menor */
+    font-weight: 700;                      /* NOVO: negrito */
+    cursor: pointer;                       /* NOVO: cursor de mão */
+    transition: background-color 0.2s ease, transform 0.15s ease; /* NOVO: animações suaves */
+}
+
+.Etapas button:not(.Avancar):not(.btn-cadastrar):hover {
+    background-color: var(--SurfaceMedio); /* NOVO: preenche no hover */
+    color: var(--TextoPrincipal);          /* NOVO: texto mais escuro no hover */
+
+}
+
+
+/* Etapa 3: Cadastrar em cima e Voltar embaixo */
+#Etapa3 .Navegacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#Etapa3 .btn-cadastrar {
+    width: 80%;
+    margin-top: 0;
+}
+
+#Etapa3 button:not(.btn-cadastrar) {
+    width: 35%;
+}
 
 .cadastro {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
     padding-bottom: 150px;
 }
 
 .imagem {
+    position: relative;
+    left: 8%;
     width: 350px;
     margin-top: 150px;
+}
+
+.DarkButton {
+    position: relative;
+    left: 10%;
+    margin-top: 155px;
+    font-size: 2.5rem;
 }
 
 .endereco {
@@ -90,10 +201,38 @@ h4 {
     border-bottom: 3px solid  var(--SurfaceMedio);
 }
 
+.LinkLogin {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--TextoSuave);
+}
+
+.LinkLogin a {
+    color: #c96a2b;
+}
+
 @media (max-width: 768px){
-        .tela-cadastro {
+
+    .tela-cadastro {
         align-items: stretch;
         padding: 0;
+    }
+
+    .cadastro {
+        gap: 10px;
+        padding-bottom: 50px;
+    }
+
+    .imagem {
+        width: 250px;
+        margin-top: 50px;
+    }
+
+    .DarkButton {
+        position: relative;
+        left: -10%;
+        margin-top: 40px;
+        font-size: 2rem;
     }
 
     .cadastro-card {
@@ -108,13 +247,20 @@ h4 {
 @media (min-width: 769px) and (max-width: 1024px){
 
     .cadastro{
-        flex-direction: column;
-        padding-bottom: 50px;
+        gap: 12px;
+        padding-bottom: 80px;
     }
 
     .imagem{
-        width: 250px;
-        margin-top: 50px;
+        width: 220px;
+        margin-top: 80px;
+    }
+
+    .DarkButton {
+        position: relative;
+        left: 15%;
+        margin-top: 78px;
+        font-size: 2rem;
     }
 
     .cadastro-card{

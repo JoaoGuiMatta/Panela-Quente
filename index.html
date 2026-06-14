@@ -1,174 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PanelaQuente - Receitas saborosas</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="PanelaQuenteFavicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/cards.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/darkmode.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="PanelaQuenteFavicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/darkmode.css" />
+  </head>
+  <body>
     <header>
-        <a href="index.html" class="logo"><img src="imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"></a>
+      <a href="index.html" class="logo"
+        ><img src="imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"
+      /></a>
 
-        <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
-        <nav id="MenuHamburguer"> <!--Menu hamburguer-->
+      <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
+      <nav id="MenuHamburguer">
+        <!--Menu hamburguer-->
 
-            <div class="MenuHeader">
-                <div class="menus">
-                    <a href="index.html" class="receitas" onclick="toggleSubmenu(event)">Receitas</a>
-                    <div class="submenu">
-                        <a href="Paginas/Manha.html">Café da Manhã</a>
-                        <a href="Paginas/Almoco.html">Almoço/janta</a>
-                        <a href="Paginas/Tarde.html">Café da Tarde</a>
-                    </div>
-                </div>
-                <a href="Paginas/CriarReceita.html">Crie a Sua</a>
-                <a href="#" onclick="ReceitaAleatoria()">Sugestão do Dia</a>
+        <div class="MenuHeader">
+          <div class="menus">
+            <a href="index.html" class="receitas" onclick="toggleSubmenu(event)"
+              >Receitas</a
+            >
+            <div class="submenu">
+              <a href="Paginas/Manha.html">Café da Manhã</a>
+              <a href="Paginas/Almoco.html">Almoço/janta</a>
+              <a href="Paginas/Tarde.html">Café da Tarde</a>
             </div>
-        </nav>
+          </div>
+          <a href="Paginas/CriarReceita.html">Crie a Sua</a>
+          <a href="#" onclick="ReceitaAleatoria()">Sugestão do Dia</a>
+        </div>
+      </nav>
 
-        <div class="DarkButton" onclick="Darkmode()">
-            <i class="bi bi-moon"></i>
-        </div>
-        
-        <div class="entrar">
-            <a href="Paginas/login.html">Entrar</a>
-        </div>
+      <div class="DarkButton" onclick="Darkmode()">
+        <i class="bi bi-moon"></i>
+      </div>
+
+      <div class="entrar">
+        <a href="Paginas/login.html">Entrar</a>
+      </div>
     </header>
-        <!-- FIM DO HEADER -->
-        
-    <main>
-        <div class="BoasVindas">
-            <h3>Que bom te ver aqui!</h3>
-            <h1>Bem-vindo(a)<span>Receitas para alegrar seu dia</span></h1>
-        </div>
+    <!-- FIM DO HEADER -->
 
-        <!-- Carrossel de Café da Manhã -->
-        <section class="TitulosCards">
-            <a href="Paginas/Manha.html" >
-                <div class="horario">
-                    <h3>Café da Manhã</h3>
-                </div>
+    <main>
+      <div class="BoasVindas">
+        <h3>Que bom te ver aqui!</h3>
+        <h1>Bem-vindo(a)<span>Receitas para alegrar seu dia</span></h1>
+      </div>
+
+      <!-- Carrossel de Café da Manhã -->
+      <section class="TitulosCards">
+        <a href="Paginas/Manha.html">
+          <div class="horario">
+            <h3>Café da Manhã</h3>
+          </div>
+        </a>
+        <div class="carossel">
+          <div class="card-receita">
+            <a href="Receitas/Tapioca.html"
+              ><img src="imagens/Tapioca.jpeg" alt="Tapioca" />
+              <h3>Tapioca de Ovo com Orégano</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />10 min
+              </h4>
             </a>
-            <div class="carossel">
-                <div class="card-receita">
-                    <a href="Receitas/Tapioca.html"><img src="imagens/Tapioca.jpeg" alt="Tapioca">
-                        <h3>Tapioca de Ovo com Orégano</h3>
-                        <h4><img src="icons/Cronometro.svg" alt="" class="tempo">10 min</h4>
-                    </a>
-                </div>
-                <div class="card-receita">
-                    <a href="Receitas/Omelete.html"><img src="imagens/Omelete.jpeg" alt="Omelete">
-                        <h3>Omelete com Queijo</h3>
-                        <h4><img src="icons/Cronometro.svg" alt="" class="tempo">15 min</h4>
-                    </a>
-                </div>
-                <div class="card-receita">
-                    <a href="Receitas/Sanduiche.html"><img src="imagens/Sanduiche.jpeg" alt="Sanduiche">
-                    <h3>Sanduiche de Peito de Peru</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">5 min</h4>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- fim cafe da manha -->
-        
-        <!-- Almoço/janta -->
-        <section class="TitulosCards">
-            <a href="Paginas/Almoco.html">
-                <div class="horario">
-                    <h3>Almoço/Janta</h3>
-                </div>
+          </div>
+          <div class="card-receita">
+            <a href="Receitas/Omelete.html"
+              ><img src="imagens/Omelete.jpeg" alt="Omelete" />
+              <h3>Omelete com Queijo</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />15 min
+              </h4>
             </a>
-            <div class="carossel">
-                <div class="card-receita">
-                    <a href="Receitas/Ratattouille.html"><img src="imagens/Ratatouille.jpeg">
-                    <h3>Ratatouille</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">1h</h4>
-                    </a>
-                </div>
-        
-                <div class="card-receita">
-                    <a href="Receitas/Lasanha.html"><img src="imagens/Lasanha.jpeg" alt="Lasanha">
-                    <h3>Lasanha de Carne</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">1h 20 min</h4>
-                    </a>
-                </div>
-        
-                <div class="card-receita">
-                    <a href="Receitas/Feijoada.html"><img src="imagens/Feijoada.jpeg" alt="Feijoada">
-                    <h3>Feijoada</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">2h</h4>
-                </a>
-                </div>
-            </div>
-        </section>
-        <!-- fim Almoço/Janta -->
-        
-        <!-- Cafe da Tarde -->
-        <section class="TitulosCards">
-            <a href="Paginas/Tarde.html">
-                <div class="horario">
-                    <h3>Café da Tarde</h3>
-                </div>
+          </div>
+          <div class="card-receita">
+            <a href="Receitas/Sanduiche.html"
+              ><img src="imagens/Sanduiche.jpeg" alt="Sanduiche" />
+              <h3>Sanduiche de Peito de Peru</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />5 min
+              </h4>
             </a>
-            <div class="carossel">
-                <div class="card-receita">
-                    <a href="Receitas/PaoDeQueijo.html"><img src="imagens/PaoDeQueijo.jpeg" alt="Pão De Queijo">
-                    <h3>Pão De Queijo</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">40 min</h4>
-                    </a>
-                </div>
-        
-                <div class="card-receita">
-                    <a href="Receitas/BoloDeCenoura.html"><img src="imagens/BoloDeCenoura.jpeg" alt="Bolo de Cenoura">
-                    <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">1h</h4>
-                    </a>
-                </div>
-        
-                <div class="card-receita">
-                    <a href="Receitas/Strudel.html" alt=""><img src="imagens/StrudelDeMaçã.jpeg" alt="Strudel">
-                    <h3>Strudel de maçã</h3>
-                    <h4><img src="icons/Cronometro.svg" alt="" class="tempo">50 min</h4>
-                    </a>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <!-- fim cafe da manha -->
+
+      <!-- Almoço/janta -->
+      <section class="TitulosCards">
+        <a href="Paginas/Almoco.html">
+          <div class="horario">
+            <h3>Almoço/Janta</h3>
+          </div>
+        </a>
+        <div class="carossel">
+          <div class="card-receita">
+            <a href="Receitas/Ratattouille.html"
+              ><img src="imagens/Ratatouille.jpeg" />
+              <h3>Ratatouille</h3>
+              <h4><img src="icons/Cronometro.svg" alt="" class="tempo" />1h</h4>
+            </a>
+          </div>
+
+          <div class="card-receita">
+            <a href="Receitas/Lasanha.html"
+              ><img src="imagens/Lasanha.jpeg" alt="Lasanha" />
+              <h3>Lasanha de Carne</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />1h 20 min
+              </h4>
+            </a>
+          </div>
+
+          <div class="card-receita">
+            <a href="Receitas/Feijoada.html"
+              ><img src="imagens/Feijoada.jpeg" alt="Feijoada" />
+              <h3>Feijoada</h3>
+              <h4><img src="icons/Cronometro.svg" alt="" class="tempo" />2h</h4>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- fim Almoço/Janta -->
+
+      <!-- Cafe da Tarde -->
+      <section class="TitulosCards">
+        <a href="Paginas/Tarde.html">
+          <div class="horario">
+            <h3>Café da Tarde</h3>
+          </div>
+        </a>
+        <div class="carossel">
+          <div class="card-receita">
+            <a href="Receitas/PaoDeQueijo.html"
+              ><img src="imagens/PaoDeQueijo.jpeg" alt="Pão De Queijo" />
+              <h3>Pão De Queijo</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />40 min
+              </h4>
+            </a>
+          </div>
+
+          <div class="card-receita">
+            <a href="Receitas/BoloDeCenoura.html"
+              ><img src="imagens/BoloDeCenoura.jpeg" alt="Bolo de Cenoura" />
+              <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+              <h4><img src="icons/Cronometro.svg" alt="" class="tempo" />1h</h4>
+            </a>
+          </div>
+
+          <div class="card-receita">
+            <a href="Receitas/Strudel.html" alt=""
+              ><img src="imagens/StrudelDeMaçã.jpeg" alt="Strudel" />
+              <h3>Strudel de maçã</h3>
+              <h4>
+                <img src="icons/Cronometro.svg" alt="" class="tempo" />50 min
+              </h4>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Mensagem ao lado -->
     <div class="cont">
-        <div class="chefe">
-            <div>
-                <svg class="icone-chef" viewBox="0 0 32 32">
-                    <path d="M6.33,18.45v8.59c0,.41,.34,.75,.75,.75h15.13c.41,0,.75-.34,.75-.75v-8.6c1.91-.75,3.27-2.6,3.27-4.77,0-2.83-2.3-5.13-5.13-5.13-.56,0-1.13,.1-1.67,.28-1.2-1.87-3.24-3.01-5.49-3.01s-4.09,1.02-5.31,2.75c-3.06-.27-5.56,2.14-5.56,5.11,0,2.17,1.36,4.02,3.27,4.77Zm1.5,7.84v-1.87h13.63v1.87H7.83Zm13.63-7.48v4.11H7.83v-4.11h13.63ZM8.19,10.05c.18,0,.36,.02,.56,.05,0,0,.01,0,.02,0,1.72,.33,2.97,1.83,2.97,3.57,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.05-1.23-3.85-3.04-4.67,.94-1.07,2.29-1.7,3.74-1.7,1.91,0,3.64,1.07,4.5,2.79,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.52-.26,1.09-.4,1.65-.4,2,0,3.63,1.63,3.63,3.63s-1.63,3.63-3.63,3.63H8.19c-2,0-3.63-1.63-3.63-3.63s1.63-3.63,3.63-3.63Z"/>
-                </svg>
-            </div>
-           <h4 class="Dica">Dica do chef</h4>
-           <div class="a"></div>
-            <p class="mensagem">“Cozinhar é transformar ingredientes simples em momentos especiais.”</p>
+      <div class="chefe">
+        <div>
+          <svg class="icone-chef" viewBox="0 0 32 32">
+            <path
+              d="M6.33,18.45v8.59c0,.41,.34,.75,.75,.75h15.13c.41,0,.75-.34,.75-.75v-8.6c1.91-.75,3.27-2.6,3.27-4.77,0-2.83-2.3-5.13-5.13-5.13-.56,0-1.13,.1-1.67,.28-1.2-1.87-3.24-3.01-5.49-3.01s-4.09,1.02-5.31,2.75c-3.06-.27-5.56,2.14-5.56,5.11,0,2.17,1.36,4.02,3.27,4.77Zm1.5,7.84v-1.87h13.63v1.87H7.83Zm13.63-7.48v4.11H7.83v-4.11h13.63ZM8.19,10.05c.18,0,.36,.02,.56,.05,0,0,.01,0,.02,0,1.72,.33,2.97,1.83,2.97,3.57,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.05-1.23-3.85-3.04-4.67,.94-1.07,2.29-1.7,3.74-1.7,1.91,0,3.64,1.07,4.5,2.79,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.52-.26,1.09-.4,1.65-.4,2,0,3.63,1.63,3.63,3.63s-1.63,3.63-3.63,3.63H8.19c-2,0-3.63-1.63-3.63-3.63s1.63-3.63,3.63-3.63Z"
+            />
+          </svg>
         </div>
+        <h4 class="Dica">Dica do chef</h4>
+        <div class="a"></div>
+        <p class="mensagem">
+          “Cozinhar é transformar ingredientes simples em momentos especiais.”
+        </p>
+      </div>
     </div>
 
     <!-- Footer -->
-   <footer class="d-flex justify-content-between align-items-center py-3 px-4 ">
-        <span>© 2026 Panela Quente</span>
-        <div class="d-flex gap-3" id="RedesSociais">
-            <a href="https://github.com/JoaoGuiMatta" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-        </div>
+    <footer class="d-flex justify-content-between align-items-center py-3 px-4">
+      <span>© 2026 Panela Quente</span>
+      <div class="d-flex gap-3" id="RedesSociais">
+        <a href="https://github.com/JoaoGuiMatta" target="_blank"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
     </footer>
 
     <!-- Arquivos JavaScript -->
+    <script src="srcipt.js"></script>
     <script src="JavaScript/DarkMode.js"></script>
     <script src="JavaScript/MenuHamburguer.js"></script>
     <script src="JavaScript/ReceitaAleatoria.js"></script>
-</body>
+  </body>
 </html>

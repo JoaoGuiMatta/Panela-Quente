@@ -1,95 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Receitas Para Seu Almoço - PanelaQuente</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../PanelaQuenteFavicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../css/TodasReceitas.css">
-    <link rel="stylesheet" href="../css/darkmode.css">
-</head>
-<body>
-       <header>
-        <a href="../index.html" class="logo"><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"></a>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../PanelaQuenteFavicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/cards.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/TodasReceitas.css" />
+    <link rel="stylesheet" href="../css/darkmode.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="logo"
+        ><img src="../imagens/PanelaQuenteLogo.png" alt="Logo.png" id="Logo"
+      /></a>
 
-        <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
-        <nav id="MenuHamburguer"> <!--Menu hamburguer-->
+      <i id="Burguer" class="bi bi-list" onclick="ClickMenu()"></i>
+      <nav id="MenuHamburguer">
+        <!--Menu hamburguer-->
 
-            <div class="MenuHeader">
-                <div class="menus">
-                    <a href="index.html" class="receitas">Receitas</a>
-                    <div class="submenu">
-                        <a href="../Paginas/Manha.html">Café da Manhã</a>
-                        <a href="../Paginas/Almoco.html">Almoço/janta</a>
-                        <a href="../Paginas/Tarde.html">Café da Tarde</a>
-                    </div>
-                </div>
-                <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
-                <a href="#" onclick="ReceitaAleatoria()">Sugestão do Dia</a>
+        <div class="MenuHeader">
+          <div class="menus">
+            <a href="index.html" class="receitas">Receitas</a>
+            <div class="submenu">
+              <a href="../Paginas/Manha.html">Café da Manhã</a>
+              <a href="../Paginas/Almoco.html">Almoço/janta</a>
+              <a href="../Paginas/Tarde.html">Café da Tarde</a>
             </div>
-        </nav>
+          </div>
+          <a href="../Paginas/CriarReceita.html">Crie a Sua</a>
+          <a href="#" onclick="ReceitaAleatoria()">Sugestão do Dia</a>
+        </div>
+      </nav>
 
-        <div class="DarkButton" onclick="Darkmode()">
-            <i class="bi bi-moon"></i>
-        </div>
-        
-        <div class="entrar">
-            <a href="../Paginas/login.html">Entrar</a>
-        </div>
+      <div class="DarkButton" onclick="Darkmode()">
+        <i class="bi bi-moon"></i>
+      </div>
+
+      <div class="entrar">
+        <a href="../Paginas/login.html">Entrar</a>
+      </div>
     </header>
-        <!-- FIM DO HEADER -->
+    <!-- FIM DO HEADER -->
 
     <div class="PagTitulo">
-        <h1>Que tal sair um pouco do arroz e frango?</h1>
-        <h2>Saia da mesmice com essas receitas</h2>
+      <h1>Que tal sair um pouco do arroz e frango?</h1>
+      <h2>Saia da mesmice com essas receitas</h2>
     </div>
 
-<!-- Almoço/janta -->
-        <section class="TitulosCards">
-            <a href="Paginas/Almoco.html">
-                <div class="horario">
-                    <h3>Almoço/Janta</h3>
-                </div>
-            </a>
-            <div class="carossel">
-                <div class="card-receita">
-                    <a href="../Receitas/Ratattouille.html"><img src="../imagens/Ratatouille.jpeg">
-                    <h3>Ratatouille</h3>
-                    <h4><img src="../icons/Cronometro.svg" alt="" class="tempo">1h</h4>
-                    </a>
-                </div>
-                
-                <div class="card-receita">
-                    <a href="../Receitas/Lasanha.html"><img src="../imagens/Lasanha.jpeg" alt="Lasanha">
-                    <h3>Lasanha de Carne</h3>
-                    <h4><img src="../icons/Cronometro.svg" alt="" class="tempo">1h 20 min</h4>
-                    </a>
-                </div>
-        
-                <div class="card-receita">
-                    <a href="../Receitas/Feijoada.html"><img src="../imagens/Feijoada.jpeg" alt="Feijoada">
-                    <h3>Feijoada</h3>
-                    <h4><img src="../icons/Cronometro.svg" alt="" class="tempo">2h</h4>
-                </a>
-                </div>
-            </div>
-        </section>
-    <!-- fim Almoço/Janta -->
-        <footer class="d-flex justify-content-between align-items-center py-3 px-4">
-            <span>© 2026
-                 Panela Quente</span>
-            <div class="d-flex gap-3">
-            <a href="https://github.com/JoaoGuiMatta"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
+    <!-- Almoço/janta -->
+    <section class="TitulosCards">
+      <a href="#">
+        <div class="horario">
+          <h3>Almoço/Janta</h3>
         </div>
+      </a>
+      <div class="carossel">
+        <div class="card-receita">
+          <a href="../Receitas/Ratattouille.html"
+            ><img src="../imagens/Ratatouille.jpeg" />
+            <h3>Ratatouille</h3>
+            <h4>
+              <img src="../icons/Cronometro.svg" alt="" class="tempo" />1h
+            </h4>
+          </a>
+        </div>
+
+        <div class="card-receita">
+          <a href="../Receitas/Lasanha.html"
+            ><img src="../imagens/Lasanha.jpeg" alt="Lasanha" />
+            <h3>Lasanha de Carne</h3>
+            <h4>
+              <img src="../icons/Cronometro.svg" alt="" class="tempo" />1h 20
+              min
+            </h4>
+          </a>
+        </div>
+
+        <div class="card-receita">
+          <a href="../Receitas/Feijoada.html"
+            ><img src="../imagens/Feijoada.jpeg" alt="Feijoada" />
+            <h3>Feijoada</h3>
+            <h4>
+              <img src="../icons/Cronometro.svg" alt="" class="tempo" />2h
+            </h4>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- fim Almoço/Janta -->
+
+    <footer class="d-flex justify-content-between align-items-center py-3 px-4">
+      <span>© 2026 Panela Quente</span>
+      <div class="d-flex gap-3" id="RedesSociais">
+        <a href="https://github.com/JoaoGuiMatta" target="_blank"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
     </footer>
+
+    <script src="../srcipt.js"></script>
     <script src="../JavaScript/DarkMode.js"></script>
     <script src="../JavaScript/MenuHamburguer.js"></script>
     <script src="../JavaScript/ReceitaAleatoria.js"></script>
-</body>
+  </body>
 </html>

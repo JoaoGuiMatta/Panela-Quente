@@ -1,116 +1,118 @@
 /* Configuração do body e configurações básicas */
 body {
-    background-color: var(--Fundo);
-    margin: 0;
-    min-height: 100vh; /* body ocupa a tela toda */
-    display: flex;
-    flex-direction: column; /* empilha os elementos verticalmente */
+  background-color: var(--FundoAlt);
+  margin: 0;
+  min-height: 100vh; /* body ocupa a tela toda */
+  display: flex;
+  flex-direction: column; /* empilha os elementos verticalmente */
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
 }
 
-body, p, input, button, .entrar{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600
+body,
+p,
+input,
+button,
+.entrar {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
-
 
 /* Header*/
 header {
-    background-color: var(--HeaderBg);
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+  background-color: var(--HeaderBg);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 header #Logo {
-    height: 110px; 
-    width: auto; 
-    margin-right: 10px;
+  height: 110px;
+  width: auto;
+  margin-right: 10px;
 }
 
 header a {
-    text-decoration: none;
-    color: var(--TextoGeral);
+  text-decoration: none;
+  color: var(--TextoGeral);
 }
 /* fim header*/
 
 /* nav */
-nav a{
-    margin: 50px;
-    padding: 10px;
+nav a {
+  margin: 50px;
+  padding: 10px;
 }
 
 nav a:hover {
-    color: var(--TextoGeralHover);
+  color: var(--TextoGeralHover);
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
 }
 /* fim nav*/
 
-
 /* class */
 .entrar {
-    color: var(--TextoGeral);
-    border: 2px solid var(--AcentoClaro);
-    padding: 5px 15px 5px 15px;
-    border-radius: 10px;
+  color: var(--TextoGeral);
+  border: 2px solid var(--AcentoClaro);
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
 }
 
-.entrar:hover{
-    text-decoration: none;
-    background-color: var(--AcentoClaro);
+.entrar:hover {
+  text-decoration: none;
+  background-color: var(--AcentoClaro);
 }
 /* fim class */
 
 /* submenus no "receitas" */
 .menus {
-    position: relative;
+  position: relative;
 }
 
 .BoasVindas {
-    text-align: center;
-    color: var(--TextoPrincipal);
-    margin-top: 20px;
-    margin-bottom: 50px;
+  text-align: center;
+  color: var(--TextoPrincipal);
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .BoasVindas h1 {
-    font-size: 1.78em;
+  font-size: 1.78em;
 }
 
 .BoasVindas h3 {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 .menus .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--HeaderBg);
-    border-radius: 10px;
-    padding: 0.5rem;
-    z-index: 99;
-    min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--HeaderBg);
+  border-radius: 10px;
+  padding: 0.5rem;
+  z-index: 99;
+  min-width: 150px;
 }
 
 .menus:hover .submenu {
@@ -118,300 +120,340 @@ nav {
 }
 
 .submenu a {
-    display: block;
-    padding: 0.4rem 0.1rem;
-    color: var(--TextoGeral);
-    text-decoration: none;
-    font-size: 0.85rem;
+  display: block;
+  padding: 0.4rem 0.1rem;
+  color: var(--TextoGeral);
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
 .submenu a:hover {
-    color: var(--TextoGeralHover);
+  color: var(--TextoGeralHover);
 }
 /* fim do submenu */
 
 /* Botao de darkmode e animação */
 .DarkButton {
-    margin-right: 50px;
-    font-size: 1.5em;
-    color: var(--AcentoClaro);
+  margin-right: 50px;
+  font-size: 1.5em;
+  color: var(--AcentoClaro);
 }
 
 .DarkButton i {
-    display: inline-block; 
-    cursor: pointer;
-    transition:
-        transform .3s ease,
-        opacity .3s ease,
-        filter .3s ease;
+  display: inline-block;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
 }
 
 .animando {
-    opacity: 0;
-    transform: scale(.9); 
+  opacity: 0;
+  transform: scale(0.9);
 }
 
 .aparecendo {
-    opacity: 0.9;
-    transform: scale(1.5);
+  opacity: 0.9;
+  transform: scale(1.5);
 }
 /* Fim do botao darkmode */
-.MenuHeader{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.MenuHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 /* Footer */
 footer {
-    background-color: var(--HeaderBg); /* cor de fundo do footer */
-    color: var(--TextoGeral); /* cor do texto */
-    margin-top: auto; /* empurra o footer pra baixo */
-    font-size: 1rem; /* deixa os ícones maiores */
+  background-color: var(--HeaderBg); /* cor de fundo do footer */
+  color: var(--TextoGeral); /* cor do texto */
+  margin-top: auto; /* empurra o footer pra baixo */
+  font-size: 1rem; /* deixa os ícones maiores */
+  flex-direction: column-reverse;
+  gap: 20px;
+  text-align: center;
 }
 
 footer a {
-    color: var(--Acento); /* cor dos ícones */
-    font-size: 1.2rem; /* tamanho dos ícones */
-    text-decoration: none; /* tira a decoração do texto */
+  color: var(--Acento); /* cor dos ícones */
+  font-size: 1.2rem; /* tamanho dos ícones */
+  text-decoration: none; /* tira a decoração do texto */
 }
 
 footer span {
-    font-size: smaller;
-    color: var(--Acento);
+  font-size: smaller;
+  color: var(--Acento);
 }
 footer a:hover {
-    color: var(--AcentoClaro); /* cor ao passar o mouse */
+  color: var(--AcentoClaro); /* cor ao passar o mouse */
 }
 
 .cont {
-    display: block;
-    position: absolute;
-    left: 50px;
-    top: 290px;
-    width: 250px;
-    height: 500px;
-    text-align: center;
-    background-color: var(--Fundo);
-    box-shadow: 0px 0px 10px 5px var(--Borda); 
-    border-radius: 15px;
-    font-family: 'Playfair Display', serif;;
-    color: var(--TextoGeral);
+  display: block;
+  position: absolute;
+  left: 50px;
+  top: 290px;
+  width: 250px;
+  height: 500px;
+  text-align: center;
+  background-color: var(--Fundo);
+  box-shadow: 0px 0px 10px 5px var(--Borda);
+  border-radius: 15px;
+  font-family: "Playfair Display", serif;
+  color: var(--TextoSuave);
 }
 
 .chefe .mensagem {
-    margin-top: 100px;
-    font-size: 1.5rem;
+  margin-top: 100px;
+  font-size: 1.5rem;
 }
-.chefe .Dica {  
-    margin-top: -5px !important;
+.chefe .Dica {
+  margin-top: -5px !important;
 }
-
-
 
 .icone-chef {
-    width: 80px;
-    fill: var(--MarromMedio);
+  width: 80px;
+  fill: var(--MarromMedio);
 }
 
 /* Menu Hambueguer */
 i#Burguer {
-    display: none;
+  display: none;
 }
 
+/* Icone de entrar ao criar conta */
+.entrar {
+  position: relative;
+}
+
+.MenuPerfil {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: auto;
+  left: 50%;
+  transform: translate(-50%);
+  background: var(--HeaderBgEscuro);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 100px;
+  z-index: 999;
+}
+
+.MenuPerfil span {
+  display: block;
+  color: var(--TextoGeral);
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.MenuPerfil a {
+  color: var(--Acento);
+  font-size: 0.85rem;
+}
+
+.entrar:hover .MenuPerfil {
+  display: block;
+}
+/* Fim Icone */
+/* ========================================================================================================= */
+
 /* Responsividade mobile */
-@media (max-width: 768px){
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
-    /* Header */
-    header {
-        justify-content: center;
-        position: sticky;
-        top: 0;          
-        z-index: 1000;  
-    }
+  header #Logo {
+    height: 120px;
+    width: auto;
+  }
 
-    header #Logo {
-       height: 120px;
-        width: auto;
-    }
+  header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    header .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  header a:first-child {
+    margin: 0 auto;
+  }
+  /* ========================================================================================================= */
 
-    header a:first-child {
-        margin: 0 auto;
-    }
+  /* ========================================================================================================= */
+  /* Menu hamburger */
+  i#Burguer {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.9em;
+    color: var(--AcentoClaro);
+    cursor: pointer;
+  }
+  /* Fim hamburger */
+  /* ========================================================================================================= */
 
-    /* Menu hamburger */
-    i#Burguer{
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.9em;
-        color: var(--AcentoClaro);
-        cursor: pointer;
-    }
-    /* Fim hamburger */
-
-    /* Nav abaixo do menu */
-    .MenuHeader{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 0px;
-        width: 180px;
-        background: var(--HeaderSubmenu);
-        padding: 10px;
-        z-index: 1000;
-        border-radius: 0px 0px 15px 0px;
-    }
-    
-    .MenuHeader a {
-        text-align: left;
-        width: 100%;
-        margin: 1px;
-        padding: 0.5px;
-    }
-
-    .menus {
-        width: 100%;
-        display: block;
-    }
-    .menus a.receitas {
-        text-align: left; /* adicionado */
-        width: 100%;
-        display: block;
-        padding-left: 0; /* adicionado */
-        margin-left: 0; /* adicionado */
-
-    }
-.menus .submenu {
-        position: relative;
-        width: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
-        box-sizing: border-box;
-    }
-
-    .menus .submenu a {
-        background-color: var(--HeaderBg);
-        margin: 5px 5px;
-        text-align: center;
-        width: auto;
-    }
-
-    .menus:hover .submenu {
+  /* ========================================================================================================= */
+  /* Nav abaixo do menu */
+  .MenuHeader {
     display: none;
-    }
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 180px;
+    background: var(--HeaderSubmenu);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 0px 0px 15px 0px;
+  }
 
-    .menus .submenu.aberto {
-        display: block; /* adicionado — só abre via JS */
-    }
-    
-    
-    /* Fim do nav */
-    .cont{
-        display: none;
-    }
-    
-    /* Fim header */
+  .MenuHeader a {
+    text-align: left;
+    width: 100%;
+    margin: 1px;
+    padding: 0.5px;
+  }
 
-    .entrar{
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  .menus {
+    width: 100%;
+    display: block;
+  }
+  .menus a.receitas {
+    text-align: left; /* adicionado */
+    width: 100%;
+    display: block;
+    padding-left: 0; /* adicionado */
+    margin-left: 0; /* adicionado */
+  }
+  .menus .submenu {
+    position: relative;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-sizing: border-box;
+  }
 
-    /* Boas vindas da pagina */
-    .BoasVindas {
-        text-align: left; 
-        margin-top: 30px;
-        padding-left: 10px;
-    }
+  .menus .submenu a {
+    background-color: var(--HeaderBg);
+    margin: 5px 5px;
+    text-align: center;
+    width: auto;
+  }
 
-    .BoasVindas h1 {
-        font-size: 1.8rem;
-    }
+  .menus:hover .submenu {
+    display: none;
+  }
 
-    .BoasVindas h3 {
-        color: var(--Acento);
-    }
+  .menus .submenu.aberto {
+    display: block; /* adicionado — só abre via JS */
+  }
+  /* Fim do nav */
+  /* ========================================================================================================= */
 
-    .BoasVindas h1 span {
-        display: block;
-        margin-top: 5px;
-    }
+  /* ========================================================================================================= */
+  .cont {
+    display: none;
+  }
+  /* ========================================================================================================= */
 
-    .DarkButton{
-        position: absolute;
-        left: 100px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 0;
-        font-size: 1.5em;
-    }
+  /* Fim header */
 
-    footer.d-flex {
-        flex-direction: column-reverse;
-        gap: 15px;
-        text-align: center;
-    }
+  .entrar {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    #RedesSociais a {
-        font-size: 1.5rem;
-    }
+  /* Boas vindas da pagina */
+  .BoasVindas {
+    text-align: left;
+    margin-top: 30px;
+    padding-left: 10px;
+  }
+
+  .BoasVindas h1 {
+    font-size: 1.8rem;
+  }
+
+  .BoasVindas h3 {
+    color: var(--Acento);
+  }
+
+  .BoasVindas h1 span {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .DarkButton {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0;
+    font-size: 1.5em;
+  }
+
+  footer.d-flex {
+    flex-direction: column-reverse;
+    gap: 15px;
+    text-align: center;
+  }
+
+  #RedesSociais a {
+    font-size: 1.5rem;
+  }
 }
 
 /* Responsividade Tablet */
-@media (min-width: 769px) and (max-width: 1024px){
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav a {
+    margin: 15px;
+    padding: 5px;
+  }
 
-    nav a{
-        margin: 15px;
-        padding: 5px;
-    }
+  nav {
+    gap: 10px;
+  }
 
-    nav{
-        gap: 10px;
-    }
+  .MenuHeader {
+    gap: 15px;
+  }
 
-    .MenuHeader{
-        gap: 15px;
-    }
+  .DarkButton {
+    margin-right: 20px;
+  }
 
-    .DarkButton{
-        margin-right: 20px;
-    }
+  .BoasVindas {
+    padding: 0 20px;
+  }
 
-    .BoasVindas{
-        padding: 0 20px;
-    }
+  .BoasVindas h1 {
+    font-size: 2rem;
+  }
 
-    .BoasVindas h1{
-        font-size: 2rem;
-    }
+  .BoasVindas h3 {
+    font-size: 1.1rem;
+  }
 
-    .BoasVindas h3{
-        font-size: 1.1rem;
-    }
-
-    .cont{
-        display: none;
-    }
+  .cont {
+    display: none;
+  }
 }
 
-@media (max-width: 1400px){
-
-    .cont {
-        width: clamp(160px, 18vw, 250px);
-        height: auto;
-    }
-
+@media (max-width: 1400px) {
+  .cont {
+    width: clamp(160px, 18vw, 250px);
+    height: auto;
+  }
 }
