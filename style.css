@@ -282,6 +282,12 @@ i#Burguer {
 /* Icone de entrar ao criar conta */
 .entrar {
   position: relative;
+  color: var(--TextoGeral);
+  border: none; 
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .MenuPerfil {
@@ -362,12 +368,10 @@ header a:first-child {
 }
 /* ========================================================================================================= */
 
-/* ========================================================================================================= */
 
-/* ==============================Menu hamburger================================================================== */
-/* Menu hamburger */
-/* Fim Menu hamburger */
+
 /* ========================================================================================================= */
+/* Menu hamburger */
 i#Burguer {
   display: block;
   position: absolute;
@@ -378,15 +382,13 @@ i#Burguer {
     color: var(--AcentoClaro);
     cursor: pointer;
   }
-  /* Fim hamburger */
   /* ========================================================================================================= */
   
   /* ========================================================================================================= */
   
-  /* ==============================Nav abaixo do menu================================================================== */
+  
+  /* ========================================================================================================= */
   /* Nav abaixo do menu */
-  /* Fim Nav abaixo do menu */
-  /* ========================================================================================================= */
   .MenuHeader {
     display: none;
     flex-direction: column;
@@ -438,9 +440,8 @@ i#Burguer {
   }
   
   .menus .submenu.aberto {
-    display: block; /* adicionado â€” sÃ³ abre via JS */
+    display: block; 
   }
-  /* Fim do nav */
   /* ========================================================================================================= */
   
   /* ========================================================================================================= */
@@ -449,19 +450,34 @@ i#Burguer {
   }
   /* ========================================================================================================= */
   
-  /* Fim header */
-  
   .entrar {
     display: block;
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    border: none; 
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .MenuPerfil {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .entrar:hover .MenuPerfil {
+        display: none;
   }
   
+  .entrar:hover {
+    display: none;
+  }
+👊
   
-  /* Boas vindas da pagina */
   /* ========================================================================================================= */
+  /* Boas vindas da pagina */
   .BoasVindas {
     text-align: left;
     margin-top: 30px;
@@ -537,6 +553,14 @@ i#Burguer {
   }
   
   .cont {
+    display: none;
+  }
+
+  .entrar:hover .MenuPerfil {
+        display: none;
+  }
+  
+  .entrar:hover {
     display: none;
   }
 }
