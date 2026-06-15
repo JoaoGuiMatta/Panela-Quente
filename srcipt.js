@@ -20,7 +20,7 @@ function Sair() {
 
 // no mobile troca hover por click
 document.querySelector('.entrar').addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
         e.preventDefault()
         const menu = document.querySelector('.MenuPerfil')
         if (menu) {
