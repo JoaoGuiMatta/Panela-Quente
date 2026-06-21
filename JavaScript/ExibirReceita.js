@@ -19,10 +19,6 @@ function exibirReceitaUsuario() {
 
 // =========================================================================================================
 // foto apenas na div da receita
-    if (receita.foto) {
-      document.getElementById('FotoReceita').src = receita.foto;
-      document.getElementById('FotoContainer').style.display = 'block';
-    }
 
     const listaPreparo = document.getElementById('ListaPreparo');
     if (receita.passos && receita.passos.length > 0) {

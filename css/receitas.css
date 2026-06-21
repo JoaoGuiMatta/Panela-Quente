@@ -33,7 +33,7 @@ h5 {
 /* configuraçoes dos ingredientes */
 .ingredientes {
     background-color: var(--SurfaceIngredientes);
-    max-width: 400px;
+    max-width: 300px;
     margin: 30px auto !important;
     border-radius: 15px;
     text-align: center;
@@ -46,12 +46,12 @@ h5 {
 
 .ingredientes li {
     border-bottom: 1.5px solid var(--SurfaceMuted);
-    padding: 10px 20px; /* adicionado â€” mais respiro */
-    text-align: left; /* mudado â€” era center */
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .ingredientes li:last-child {
-    border-bottom: none; /* adicionado â€” remove Ãºltima linha */
+    border-bottom: none;
 }
 /* ========================================================================================================== */
 
@@ -60,10 +60,18 @@ h5 {
 .preparo {
     list-style: none;
     padding: 0;
+    align-items: center;
+    background-color: var(--BordaInput);
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
+    max-width: 700px; 
+    width: 100%; 
+    margin: 30px auto; 
 }
 
+
 .preparo li {
-    border-bottom: 1px solid var(--BordaInput);
+    border-bottom: 1.5px solid var(--SurfaceMuted);
     padding: 20px 0;
     margin-left: 100px;
     margin-right: 100px;
@@ -83,7 +91,7 @@ h5 {
     justify-content: center;
     border-radius: 5px;
     background-color: var(--SurfaceIngredientes);
-    color:var(--Preto);
+    color:var(--TextoSecundario);
     font-weight: bold;
     font-size: small;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
@@ -92,7 +100,7 @@ h5 {
 .ReceitasPasso p {
     margin: 0;
     font-size: medium;
-    color:var(--TextoSecundario) ;
+    color:var(--TextoSecundario);
 }
 
 .Cronometro {
@@ -112,7 +120,7 @@ h5 {
     }
 
     .elementos {
-        width: fit-content;
+        width: 200px;
         max-width: 90%;
         margin: 30px auto;
         padding: 10px 20px;
